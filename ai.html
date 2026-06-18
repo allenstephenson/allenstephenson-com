@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Articles and guidance about responsible artificial intelligence in local government." />
+  <title>AI in Local Government | The Digital City</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header" aria-label="Site header">
+      <a class="brand" href="index.html#top" aria-label="The Digital City home"><span class="brand-mark" aria-hidden="true"></span><span>The Digital City</span></a>
+      <nav class="main-nav" aria-label="Primary navigation"><a href="index.html#systems">Systems</a><a href="index.html#articles">Articles</a><a href="index.html#radar">Radar</a><a href="index.html#projects">Projects</a><a href="ai.html" aria-current="page">AI</a></nav>
+    </header>
+    <main>
+      <section class="page-hero" aria-labelledby="ai-page-title">
+        <p class="eyebrow">Dedicated topic page</p>
+        <h1 id="ai-page-title">AI in Local Government</h1>
+        <p class="hero-description">A collection of practical, plain-language articles on using AI responsibly in municipal operations, records, emergency communications, and staff knowledge workflows.</p>
+      </section>
+      <section class="section ai-section" aria-labelledby="ai-articles-title">
+        <div class="section-heading"><p class="eyebrow">AI articles</p><h2 id="ai-articles-title">Responsible adoption starts with specific use cases</h2><p>Filter the collection to find articles about governance, public safety, records, workforce support, and field operations.</p></div>
+        <div class="filter-bar"><label for="aiSearch">Search AI articles</label><input id="aiSearch" type="search" placeholder="Filter AI articles" /></div>
+        <div class="article-grid compact" id="aiArticles"></div>
+        <p class="empty-state" id="aiArticlesEmpty" hidden>No AI articles match that search.</p>
+      </section>
+    </main>
+    <footer class="site-footer"><strong>The Digital City</strong><p>Exploring technology, infrastructure, and innovation in the public sector.</p></footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

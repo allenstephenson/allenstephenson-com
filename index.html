@@ -20,7 +20,9 @@
       <nav class="main-nav" aria-label="Primary navigation">
         <a href="#systems">Systems</a>
         <a href="#articles">Articles</a>
-        <a href="#ai">AI</a>
+        <a href="#radar">Radar</a>
+        <a href="#projects">Projects</a>
+        <a href="ai.html">AI</a>
         <a href="#infrastructure">Infrastructure</a>
       </nav>
     </header>
@@ -35,6 +37,7 @@
           <div class="hero-actions" aria-label="Featured topic links">
             <a class="button primary" href="#articles">Read featured articles</a>
             <a class="button secondary" href="#systems">Explore city systems</a>
+            <a class="button secondary" href="ai.html">Visit AI page</a>
           </div>
         </div>
         <div class="hero-visual" aria-label="Stylized digital city skyline and network map" role="img">
@@ -103,6 +106,37 @@
         </div>
       </section>
 
+
+      <section class="section" id="radar" aria-labelledby="radar-title">
+        <div class="section-heading">
+          <p class="eyebrow">Technology radar</p>
+          <h2 id="radar-title">What city technologists are tracking now</h2>
+          <p>A practical radar for separating proven municipal platforms from experiments, future bets, and tools ready for retirement.</p>
+        </div>
+        <div class="radar-grid">
+          <article class="radar-card emerging"><span class="radar-status">Emerging</span><h3>Digital twins, edge AI, and computer vision</h3><p>Pilot carefully where sensor data can improve planning, traffic analysis, facilities monitoring, and infrastructure inspection.</p></article>
+          <article class="radar-card mainstream"><span class="radar-status">Mainstream</span><h3>Cloud identity, GIS portals, and endpoint management</h3><p>These are now foundational capabilities for secure hybrid work, public dashboards, mapping workflows, and managed devices.</p></article>
+          <article class="radar-card watch"><span class="radar-status">Watch List</span><h3>Autonomous permitting assistants and smart kiosks</h3><p>Promising resident-service tools need strong accessibility, data-quality, privacy, and escalation designs before wide deployment.</p></article>
+          <article class="radar-card sunset"><span class="radar-status">Sunset</span><h3>Unsupported servers, shared logins, and paper-only routing</h3><p>Legacy practices increase service risk and should be retired through modernization plans, training, and change management.</p></article>
+        </div>
+      </section>
+
+      <section class="section" id="projects" aria-labelledby="projects-title">
+        <div class="section-heading">
+          <p class="eyebrow">Project showcase</p>
+          <h2 id="projects-title">Fictional municipal technology projects</h2>
+          <p>Six imagined initiatives showing how cities can connect technology choices to better service outcomes.</p>
+        </div>
+        <div class="project-grid">
+          <article class="project-card"><span>01</span><h3>Riverbend Fiber Ring</h3><p>A resilient municipal fiber backbone linking city hall, public works, fire stations, libraries, and traffic cabinets.</p></article>
+          <article class="project-card"><span>02</span><h3>Harborview Open Data Hub</h3><p>A public portal for budgets, permits, inspections, capital projects, and neighborhood service metrics.</p></article>
+          <article class="project-card"><span>03</span><h3>Northgate Smart Snow Desk</h3><p>AVL, weather feeds, route dashboards, and resident alerts for winter operations and plow coordination.</p></article>
+          <article class="project-card"><span>04</span><h3>Maple Junction Cyber Uplift</h3><p>Identity modernization, phishing-resistant MFA, endpoint detection, backups, and incident exercises.</p></article>
+          <article class="project-card"><span>05</span><h3>Civic Center Room Refresh</h3><p>Hybrid meeting rooms with accessible audio, captioning, agenda integration, and secure streaming.</p></article>
+          <article class="project-card"><span>06</span><h3>Summit County Field App</h3><p>A mobile inspection and work-order app that connects GIS layers, photos, offline forms, and records retention.</p></article>
+        </div>
+      </section>
+
       <section class="section split-band" id="infrastructure" aria-labelledby="infra-title">
         <div>
           <p class="eyebrow">Digital infrastructure</p>
@@ -117,13 +151,16 @@
           <h2 id="articles-title">Technology explained for the public sector</h2>
           <p>A flexible article system built for a growing library of public-sector technology explainers.</p>
         </div>
+        <div class="filter-bar"><label for="articleSearch">Search articles</label><input id="articleSearch" type="search" placeholder="Filter by topic, title, or category" /></div>
         <div class="article-grid" id="featuredArticles"></div>
+        <p class="empty-state" id="featuredArticlesEmpty" hidden>No articles match that search.</p>
       </section>
 
       <section class="section ai-section" id="ai" aria-labelledby="ai-title">
         <div class="section-heading">
           <p class="eyebrow">Emerging practice</p>
           <h2 id="ai-title">AI &amp; The Future of Government</h2>
+          <p>Explore the dedicated <a class="inline-link" href="ai.html">AI in local government page</a> for deeper articles and implementation guidance.</p>
           <p>Practical previews of where artificial intelligence can support public service, and where human judgment, transparency, and policy must remain central.</p>
         </div>
         <div class="article-grid compact" id="aiArticles"></div>

@@ -99,3 +99,34 @@ h3 { font-size: 1.35rem; letter-spacing: -.03em; }
 @keyframes pulse { from{background-position-y:0} to{background-position-y:180px} }
 @media (max-width: 900px) { .hero { grid-template-columns: 1fr; min-height: auto; } .hero-visual { min-height: 420px; } .feature-grid, .article-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .split-band { grid-template-columns: 1fr; } }
 @media (max-width: 640px) { .site-shell { width: min(100% - 22px, 1180px); } .site-header { align-items: flex-start; border-radius: 24px; flex-direction: column; } .main-nav { justify-content: flex-start; } h1 { font-size: clamp(3.2rem, 18vw, 5rem); } .feature-grid, .article-grid { grid-template-columns: 1fr; } .hero-actions { flex-direction: column; } .button { text-align: center; } .section { padding: 50px 0; } }
+
+.radar-grid, .project-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+.project-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.radar-card, .project-card { position: relative; overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); background: var(--panel); box-shadow: var(--shadow); padding: 24px; transition: transform .25s ease, border-color .25s ease, background .25s ease; }
+.radar-card::after, .project-card::after { content: ""; position: absolute; inset: 0; background: radial-gradient(220px circle at var(--x, 50%) var(--y, 0%), rgba(39,215,255,.14), transparent 42%); opacity: 0; transition: opacity .25s ease; pointer-events: none; }
+.radar-card:hover, .project-card:hover { transform: translateY(-8px); border-color: rgba(39,215,255,.55); background: var(--panel-strong); }
+.radar-card:hover::after, .project-card:hover::after { opacity: 1; }
+.radar-status, .project-card span, .article-meta { color: var(--accent-3); font-size: .75rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.radar-card p, .project-card p, .article-body p, .article-body li, .page-hero p { color: var(--muted); line-height: 1.7; }
+.radar-card.emerging { border-color: rgba(39,215,255,.34); }
+.radar-card.mainstream { border-color: rgba(74,222,128,.34); }
+.radar-card.watch { border-color: rgba(139,92,246,.36); }
+.radar-card.sunset { border-color: rgba(248,113,113,.34); }
+.project-card span { display: inline-grid; place-items: center; width: 42px; height: 42px; margin-bottom: 22px; border-radius: 14px; background: rgba(39,215,255,.11); color: var(--accent); }
+.filter-bar { display: flex; align-items: center; gap: 14px; margin: 0 0 24px; padding: 14px; border: 1px solid var(--line); border-radius: 18px; background: rgba(255,255,255,.04); }
+.filter-bar label { font-weight: 800; color: var(--text); white-space: nowrap; }
+.filter-bar input { width: 100%; border: 1px solid var(--line); border-radius: 999px; background: rgba(2, 10, 18, .74); color: var(--text); padding: 13px 16px; font: inherit; outline: none; }
+.filter-bar input:focus { border-color: rgba(39,215,255,.7); box-shadow: 0 0 0 4px rgba(39,215,255,.12); }
+.article-meta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 16px; color: var(--muted); }
+.article-card .read-more { display: inline-block; }
+.inline-link { color: var(--accent); font-weight: 800; text-decoration: underline; text-decoration-color: rgba(39,215,255,.45); text-underline-offset: 4px; }
+.empty-state { padding: 18px; border: 1px dashed var(--line); border-radius: 18px; color: var(--muted); }
+.page-hero { padding: 80px 0 36px; max-width: 920px; }
+.page-hero h1 { font-size: clamp(3.2rem, 8vw, 7rem); }
+.article-layout { display: grid; grid-template-columns: minmax(0, 760px) minmax(220px, 1fr); gap: 42px; align-items: start; padding-bottom: 52px; }
+.article-body { border: 1px solid var(--line); border-radius: 30px; background: var(--panel); box-shadow: var(--shadow); padding: clamp(24px, 5vw, 48px); }
+.article-body h2 { font-size: clamp(1.8rem, 3vw, 2.7rem); margin-top: 34px; }
+.article-sidebar { position: sticky; top: 120px; border: 1px solid var(--line); border-radius: 24px; background: rgba(255,255,255,.04); padding: 22px; color: var(--muted); }
+.article-sidebar a { display: inline-block; margin-top: 14px; color: var(--accent); font-weight: 800; }
+@media (max-width: 900px) { .radar-grid, .project-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .article-layout { grid-template-columns: 1fr; } .article-sidebar { position: static; } }
+@media (max-width: 640px) { .radar-grid, .project-grid { grid-template-columns: 1fr; } .filter-bar { align-items: stretch; flex-direction: column; } }
