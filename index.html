@@ -1,10 +1,141 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Allen Stephenson</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="The Digital City explores the technology, infrastructure, cybersecurity, GIS, cloud services, communications systems, and artificial intelligence powering modern local government." />
+  <title>The Digital City | Technology. Infrastructure. Public Service.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <h1>Allen Stephenson</h1>
-    <p>Personal website coming soon.</p>
+  <div class="site-shell">
+    <header class="site-header" aria-label="Site header">
+      <a class="brand" href="#top" aria-label="The Digital City home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>The Digital City</span>
+      </a>
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a href="#systems">Systems</a>
+        <a href="#articles">Articles</a>
+        <a href="#ai">AI</a>
+        <a href="#infrastructure">Infrastructure</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-content">
+          <p class="eyebrow">Municipal technology publication</p>
+          <h1 id="hero-title">The Digital City</h1>
+          <p class="subtitle">Technology. Infrastructure. Public Service.</p>
+          <p class="hero-description">Exploring the systems, networks, and innovations that keep modern communities connected, secure, and operational.</p>
+          <div class="hero-actions" aria-label="Featured topic links">
+            <a class="button primary" href="#articles">Read featured articles</a>
+            <a class="button secondary" href="#systems">Explore city systems</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-label="Stylized digital city skyline and network map" role="img">
+          <div class="scanline"></div>
+          <div class="skyline">
+            <span class="tower t1"></span>
+            <span class="tower t2"></span>
+            <span class="tower t3"></span>
+            <span class="tower t4"></span>
+            <span class="tower t5"></span>
+          </div>
+          <div class="network-map">
+            <span class="node n1"></span>
+            <span class="node n2"></span>
+            <span class="node n3"></span>
+            <span class="node n4"></span>
+            <span class="route r1"></span>
+            <span class="route r2"></span>
+            <span class="route r3"></span>
+          </div>
+          <div class="data-panel">
+            <span>PUBLIC NETWORK</span>
+            <strong>99.98%</strong>
+            <small>resilience index</small>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="systems" aria-labelledby="systems-title">
+        <div class="section-heading">
+          <p class="eyebrow">Core coverage</p>
+          <h2 id="systems-title">Systems that power public service</h2>
+          <p>Interactive briefs on the platforms, networks, data, and resilience practices that support modern government operations.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card" tabindex="0">
+            <span class="card-icon">▦</span>
+            <h3>Municipal Technology</h3>
+            <p>How technology supports everyday government operations and public services.</p>
+          </article>
+          <article class="feature-card" tabindex="0">
+            <span class="card-icon">◉</span>
+            <h3>Public Safety Communications</h3>
+            <p>The networks and systems behind emergency response and critical communications.</p>
+          </article>
+          <article class="feature-card" tabindex="0">
+            <span class="card-icon">⌖</span>
+            <h3>GIS &amp; Mapping</h3>
+            <p>The digital maps and location intelligence that support modern communities.</p>
+          </article>
+          <article class="feature-card" tabindex="0">
+            <span class="card-icon">⬢</span>
+            <h3>Cybersecurity</h3>
+            <p>Protecting public systems, infrastructure, and information.</p>
+          </article>
+          <article class="feature-card" tabindex="0">
+            <span class="card-icon">☁</span>
+            <h3>Cloud &amp; Infrastructure</h3>
+            <p>Data centers, cloud services, backups, resilience, and continuity.</p>
+          </article>
+          <article class="feature-card" tabindex="0">
+            <span class="card-icon">✦</span>
+            <h3>Artificial Intelligence</h3>
+            <p>How AI may transform government operations and public service delivery.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section split-band" id="infrastructure" aria-labelledby="infra-title">
+        <div>
+          <p class="eyebrow">Digital infrastructure</p>
+          <h2 id="infra-title">From fiber routes to field operations</h2>
+        </div>
+        <p>Local government depends on a layered technology stack: radio systems, call handling, identity services, endpoint management, maps, public meeting tools, sensor networks, backup power, and cloud continuity. The Digital City explains those layers in plain language for readers who care about resilient public service.</p>
+      </section>
+
+      <section class="section" id="articles" aria-labelledby="articles-title">
+        <div class="section-heading">
+          <p class="eyebrow">Featured articles</p>
+          <h2 id="articles-title">Technology explained for the public sector</h2>
+          <p>A flexible article system built for a growing library of public-sector technology explainers.</p>
+        </div>
+        <div class="article-grid" id="featuredArticles"></div>
+      </section>
+
+      <section class="section ai-section" id="ai" aria-labelledby="ai-title">
+        <div class="section-heading">
+          <p class="eyebrow">Emerging practice</p>
+          <h2 id="ai-title">AI &amp; The Future of Government</h2>
+          <p>Practical previews of where artificial intelligence can support public service, and where human judgment, transparency, and policy must remain central.</p>
+        </div>
+        <div class="article-grid compact" id="aiArticles"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <strong>The Digital City</strong>
+      <p>Exploring technology, infrastructure, and innovation in the public sector.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
