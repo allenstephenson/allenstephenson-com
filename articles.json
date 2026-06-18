@@ -1,0 +1,218 @@
+[
+  {
+    "title": "How cities are evaluating generative AI for public services",
+    "topic": "Artificial Intelligence",
+    "source": "Government Technology",
+    "url": "TODO",
+    "summary": "A public-sector focused look at how agencies are testing generative AI for staff support, service delivery, and policy-controlled workflows.",
+    "date": "2026-05-20",
+    "readingTime": "6 min read"
+  },
+  {
+    "title": "Practical AI governance questions for local agencies",
+    "topic": "Artificial Intelligence",
+    "source": "National League of Cities",
+    "url": "TODO",
+    "summary": "Guidance-style coverage of the transparency, oversight, privacy, and procurement questions cities should ask before deploying AI tools.",
+    "date": "2026-04-15",
+    "readingTime": "5 min read"
+  },
+  {
+    "title": "Where AI can help public servants without replacing judgment",
+    "topic": "Artificial Intelligence",
+    "source": "Brookings Institution",
+    "url": "TODO",
+    "summary": "A policy-centered overview of using AI for summarization, search, translation, and analysis while keeping humans accountable for decisions.",
+    "date": "2026-03-28",
+    "readingTime": "7 min read"
+  },
+  {
+    "title": "Local government cyber resilience starts with the basics",
+    "topic": "Cybersecurity",
+    "source": "CISA",
+    "url": "TODO",
+    "summary": "A practical reminder that identity security, patching, backups, endpoint protection, and exercises remain essential for public-sector resilience.",
+    "date": "2026-05-07",
+    "readingTime": "5 min read"
+  },
+  {
+    "title": "Why ransomware planning matters for cities and counties",
+    "topic": "Cybersecurity",
+    "source": "StateScoop",
+    "url": "TODO",
+    "summary": "Coverage of ransomware preparedness, incident response planning, data recovery, and the operational impact of attacks on local services.",
+    "date": "2026-04-22",
+    "readingTime": "6 min read"
+  },
+  {
+    "title": "Cybersecurity grant priorities for public agencies",
+    "topic": "Cybersecurity",
+    "source": "NASCIO",
+    "url": "TODO",
+    "summary": "A state and local government perspective on strengthening cyber programs through planning, governance, shared services, and measurable controls.",
+    "date": "2026-03-12",
+    "readingTime": "5 min read"
+  },
+  {
+    "title": "GIS is becoming core civic infrastructure",
+    "topic": "GIS & Mapping",
+    "source": "Esri Blog",
+    "url": "TODO",
+    "summary": "Examples of how maps, spatial analysis, dashboards, and field data collection support planning, public works, and emergency response.",
+    "date": "2026-05-13",
+    "readingTime": "4 min read"
+  },
+  {
+    "title": "How location intelligence supports climate and resilience work",
+    "topic": "GIS & Mapping",
+    "source": "Route Fifty",
+    "url": "TODO",
+    "summary": "A look at how governments use mapping to understand flooding, heat, assets, vulnerable populations, and long-term infrastructure risks.",
+    "date": "2026-04-09",
+    "readingTime": "6 min read"
+  },
+  {
+    "title": "Open data maps help residents understand city services",
+    "topic": "GIS & Mapping",
+    "source": "Data-Smart City Solutions",
+    "url": "TODO",
+    "summary": "Coverage of public dashboards and map-based storytelling that make budgets, permits, projects, and service requests easier to understand.",
+    "date": "2026-02-26",
+    "readingTime": "5 min read"
+  },
+  {
+    "title": "Next Generation 911 moves emergency calling onto modern networks",
+    "topic": "NG911 & Emergency Communications",
+    "source": "911.gov",
+    "url": "TODO",
+    "summary": "An overview of NG911 concepts, including IP-based routing, richer data, interoperability, and the operational changes facing emergency centers.",
+    "date": "2026-05-01",
+    "readingTime": "6 min read"
+  },
+  {
+    "title": "What public safety leaders should know about NG911 transition planning",
+    "topic": "NG911 & Emergency Communications",
+    "source": "NENA",
+    "url": "TODO",
+    "summary": "A planning-focused article on governance, standards, GIS data readiness, cybersecurity, training, and interagency coordination for NG911.",
+    "date": "2026-04-04",
+    "readingTime": "7 min read"
+  },
+  {
+    "title": "Emergency call centers prepare for data-rich requests for help",
+    "topic": "NG911 & Emergency Communications",
+    "source": "MissionCritical Communications",
+    "url": "TODO",
+    "summary": "Industry coverage of how emergency communications centers are preparing for texts, images, location data, and new operational workflows.",
+    "date": "2026-03-18",
+    "readingTime": "5 min read"
+  },
+  {
+    "title": "Land mobile radio remains essential for emergency responders",
+    "topic": "Public Safety Communications",
+    "source": "APCO International",
+    "url": "TODO",
+    "summary": "A public safety communications perspective on why resilient radio coverage, priority access, and interoperability continue to matter.",
+    "date": "2026-05-16",
+    "readingTime": "4 min read"
+  },
+  {
+    "title": "Interoperability lessons for public safety networks",
+    "topic": "Public Safety Communications",
+    "source": "FirstNet Authority",
+    "url": "TODO",
+    "summary": "Coverage of broadband, radio, dispatch, and mutual-aid coordination needs that help responders communicate during complex incidents.",
+    "date": "2026-04-18",
+    "readingTime": "5 min read"
+  },
+  {
+    "title": "Dispatch technology modernization reaches beyond the radio console",
+    "topic": "Public Safety Communications",
+    "source": "Urgent Communications",
+    "url": "TODO",
+    "summary": "An article-style overview of CAD, logging recorders, mapping, analytics, cybersecurity, and staffing considerations in communications centers.",
+    "date": "2026-03-07",
+    "readingTime": "6 min read"
+  },
+  {
+    "title": "Cloud modernization requires governance, not just migration",
+    "topic": "Cloud & Infrastructure",
+    "source": "FedTech Magazine",
+    "url": "TODO",
+    "summary": "A technology operations look at cloud cost controls, identity, backups, architecture, procurement, and service ownership for public agencies.",
+    "date": "2026-05-09",
+    "readingTime": "5 min read"
+  },
+  {
+    "title": "Hybrid infrastructure is the reality for many local governments",
+    "topic": "Cloud & Infrastructure",
+    "source": "Government Technology",
+    "url": "TODO",
+    "summary": "Coverage of how cities balance legacy systems, SaaS tools, data centers, network reliability, and disaster recovery in hybrid environments.",
+    "date": "2026-04-11",
+    "readingTime": "6 min read"
+  },
+  {
+    "title": "Backups and continuity planning protect essential public services",
+    "topic": "Cloud & Infrastructure",
+    "source": "CISA",
+    "url": "TODO",
+    "summary": "A resilience-focused article about recoverable backups, tested procedures, service prioritization, and continuity planning for agencies.",
+    "date": "2026-02-14",
+    "readingTime": "5 min read"
+  },
+  {
+    "title": "Smart infrastructure projects need clear public value",
+    "topic": "Smart Infrastructure",
+    "source": "Smart Cities Dive",
+    "url": "TODO",
+    "summary": "A practical look at connected streetlights, sensors, traffic systems, and asset monitoring through the lens of outcomes and governance.",
+    "date": "2026-05-23",
+    "readingTime": "5 min read"
+  },
+  {
+    "title": "Digital twins and infrastructure planning move from pilots to practice",
+    "topic": "Smart Infrastructure",
+    "source": "Cities Today",
+    "url": "TODO",
+    "summary": "Coverage of digital twin use cases for transportation, utilities, capital planning, resilience, and cross-department collaboration.",
+    "date": "2026-04-02",
+    "readingTime": "6 min read"
+  },
+  {
+    "title": "Sensor networks can improve operations when privacy is built in",
+    "topic": "Smart Infrastructure",
+    "source": "Urban Institute",
+    "url": "TODO",
+    "summary": "A civic technology discussion of responsible sensor deployments, data minimization, public communication, and measurable service benefits.",
+    "date": "2026-03-21",
+    "readingTime": "7 min read"
+  },
+  {
+    "title": "Digital government is a service design challenge",
+    "topic": "Digital Government",
+    "source": "Beeck Center for Social Impact + Innovation",
+    "url": "TODO",
+    "summary": "An article on making digital services easier to use through plain language, accessibility, feedback loops, and cross-functional product teams.",
+    "date": "2026-05-28",
+    "readingTime": "6 min read"
+  },
+  {
+    "title": "Modernizing resident services without leaving people behind",
+    "topic": "Digital Government",
+    "source": "Code for America",
+    "url": "TODO",
+    "summary": "A people-centered view of forms, benefits, service portals, identity, accessibility, and the need to keep non-digital support available.",
+    "date": "2026-04-25",
+    "readingTime": "5 min read"
+  },
+  {
+    "title": "Procurement can make or break public-sector technology projects",
+    "topic": "Digital Government",
+    "source": "Digital Service Network",
+    "url": "TODO",
+    "summary": "Coverage of modular procurement, user needs, delivery risks, vendor management, and sustainable ownership for government technology work.",
+    "date": "2026-03-29",
+    "readingTime": "6 min read"
+  }
+]
