@@ -23,16 +23,57 @@ const categoryIcons = {
 };
 
 const quickNeedMap = {
-  "Crisis Help": { query: "crisis emergency 911 988 domestic violence", category: "" },
-  Food: { query: "food pantry basic needs", category: "Food & Basic Needs" },
-  Housing: { query: "housing shelter homeless rent", category: "Housing & Shelter" },
-  "Mental Health": { query: "mental health substance crisis counseling", category: "Mental Health & Substance Use" },
-  Utilities: { query: "utility utilities financial assistance", category: "Utilities & Financial Help" },
-  Veterans: { query: "veterans military Tinker", category: "Veterans & Military" },
-  Seniors: { query: "senior aging caregiver", category: "Senior Services" },
-  "Youth & Families": { query: "youth family students children schools", category: "Youth & Family" },
-  Transportation: { query: "transportation transit bus", category: "Transportation" },
-  "City Services": { query: "city services utilities police trash permits", category: "City Services" }
+  "Crisis Help": {
+    label: "Crisis",
+    categories: ["Crisis & Emergency", "Domestic Violence & Safety"],
+    terms: ["crisis", "emergency", "911", "988", "suicide", "domestic violence", "safety planning", "emergency shelter", "immediate danger", "overdose"],
+    mode: "any"
+  },
+  Food: {
+    categories: ["Food & Basic Needs"],
+    terms: ["food", "pantry", "groceries", "meals", "baby supplies", "infant supplies", "basic needs"],
+    mode: "any"
+  },
+  Housing: {
+    categories: ["Housing & Shelter"],
+    terms: ["housing", "shelter", "homeless", "homelessness", "rent", "rental", "eviction", "home repair", "rehabilitation", "transitional housing", "affordable housing"],
+    mode: "any"
+  },
+  "Mental Health": {
+    categories: ["Mental Health & Substance Use"],
+    terms: ["mental health", "behavioral health", "substance use", "counseling", "crisis", "peer support", "recovery"],
+    mode: "any"
+  },
+  Utilities: {
+    categories: ["Utilities & Financial Help"],
+    terms: ["utility", "utilities", "electric", "water", "gas", "financial assistance", "bill assistance"],
+    mode: "any"
+  },
+  Veterans: {
+    categories: ["Veterans & Military"],
+    terms: ["veteran", "veterans", "military", "Tinker", "ODVA", "benefits"],
+    mode: "any"
+  },
+  Seniors: {
+    categories: ["Senior Services"],
+    terms: ["senior", "seniors", "aging", "caregiver", "lunch", "older adults"],
+    mode: "any"
+  },
+  "Youth & Families": {
+    categories: ["Youth & Family", "Family & Community Support"],
+    terms: ["youth", "family", "families", "children", "students", "tutoring", "Head Start", "child care", "school", "after school"],
+    mode: "any"
+  },
+  Transportation: {
+    categories: ["Transportation"],
+    terms: ["transportation", "transit", "bus", "bus pass", "paratransit", "mobility"],
+    mode: "any"
+  },
+  "City Services": {
+    categories: ["City Services"],
+    terms: ["Midwest City", "city", "city hall", "permits", "police", "utilities", "trash", "recycling", "neighborhood", "grants", "code enforcement"],
+    mode: "any"
+  }
 };
 
 let resources = [];
@@ -59,6 +100,54 @@ function resourceSearchText(resource) {
     ...(resource.audiences || []),
     ...(resource.needs || [])
   ].join(" "));
+}
+
+function quickNeedSearchText(resource) {
+  return normalize([
+    resource.name,
+    resource.category,
+    resource.description,
+    resource.hours,
+    resource.eligibility,
+    ...(resource.audiences || []),
+    ...(resource.needs || [])
+  ].join(" "));
+}
+
+function searchTokens(query) {
+  return normalize(query).split(/\s+/).filter(Boolean);
+}
+
+function matchesSearchQuery(resource, query) {
+  const normalizedQuery = normalize(query.trim());
+  if (!normalizedQuery) return true;
+
+  const text = resourceSearchText(resource);
+  if (text.includes(normalizedQuery)) return true;
+
+  const tokens = searchTokens(normalizedQuery);
+  return tokens.length > 1 && tokens.every((token) => text.includes(token));
+}
+
+function quickNeedLabel(quickNeed) {
+  return quickNeedMap[quickNeed]?.label || quickNeed;
+}
+
+function matchesQuickNeed(resource, quickNeed) {
+  if (!quickNeed) return true;
+
+  const quick = quickNeedMap[quickNeed];
+  if (!quick) return true;
+
+  const categories = quick.categories || [];
+  if (categories.includes(resource.category)) return true;
+
+  const terms = quick.terms || [];
+  if (!terms.length) return false;
+
+  const text = quickNeedSearchText(resource);
+  const matcher = (term) => text.includes(normalize(term));
+  return quick.mode === "all" ? terms.every(matcher) : terms.some(matcher);
 }
 
 function iconFor(resource) {
@@ -210,8 +299,9 @@ function getFilteredResources() {
   return resources.filter((resource) => {
     const categoryMatches = !category || resource.category === category;
     const audienceMatches = !audience || [...(resource.audiences || []), ...(resource.needs || [])].includes(audience);
-    const queryMatches = !query || resourceSearchText(resource).includes(query);
-    return categoryMatches && audienceMatches && queryMatches;
+    const queryMatches = matchesSearchQuery(resource, query);
+    const quickNeedMatches = matchesQuickNeed(resource, currentQuickNeed);
+    return categoryMatches && audienceMatches && queryMatches && quickNeedMatches;
   });
 }
 
@@ -226,7 +316,7 @@ function renderActiveFilters(total) {
   const category = document.getElementById("categoryFilter").value;
   const audience = document.getElementById("audienceFilter").value;
 
-  if (currentQuickNeed) filters.push(`Quick need: ${currentQuickNeed}`);
+  if (currentQuickNeed) filters.push(`Quick need: ${quickNeedLabel(currentQuickNeed)}`);
   if (query) filters.push(`Keyword: ${query}`);
   if (category) filters.push(`Category: ${category}`);
   if (audience) filters.push(`Audience/need: ${audience}`);
@@ -297,8 +387,8 @@ function wireEvents() {
       const quick = quickNeedMap[button.dataset.quick];
       if (!quick) return;
       currentQuickNeed = button.dataset.quick;
-      document.getElementById("resourceSearch").value = quick.query;
-      document.getElementById("categoryFilter").value = quick.category;
+      document.getElementById("resourceSearch").value = "";
+      document.getElementById("categoryFilter").value = "";
       document.getElementById("audienceFilter").value = "";
       applyFilters();
       document.getElementById("directory-app").scrollIntoView({ behavior: "smooth", block: "start" });
