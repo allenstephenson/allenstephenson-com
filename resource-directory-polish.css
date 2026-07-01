@@ -1,0 +1,99 @@
+/* Final service-finder polish overrides. Kept separate so the clean PR avoids unrelated site styles. */
+.urgent-compact-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+}
+.urgent-card {
+  min-height: 245px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 16px;
+  border: 1px solid rgba(248,113,113,.24);
+  border-radius: 22px;
+  background: linear-gradient(180deg, rgba(127,29,29,.18), rgba(14,32,47,.74));
+  color: var(--text);
+  box-shadow: 0 18px 48px rgba(0,0,0,.22);
+}
+.urgent-card.core-urgent-card {
+  border-color: rgba(39,215,255,.28);
+  background: linear-gradient(180deg, rgba(39,215,255,.13), rgba(14,32,47,.78));
+}
+.urgent-card .category {
+  display: inline-flex;
+  width: fit-content;
+  margin-bottom: 8px;
+  color: var(--accent-3);
+  font-size: .7rem;
+  font-weight: 900;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.urgent-card h3 {
+  font-size: 1rem;
+  line-height: 1.18;
+  letter-spacing: -.02em;
+}
+.urgent-card p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: .9rem;
+  line-height: 1.45;
+}
+.urgent-card small {
+  display: block;
+  margin-top: 10px;
+  color: #9db4c7;
+  font-weight: 700;
+}
+.urgent-card-actions {
+  display: grid;
+  gap: 8px;
+  margin-top: auto;
+}
+.urgent-card-actions .button {
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+}
+.filter-grid.compact-filter-grid {
+  grid-template-columns: minmax(240px, 1fr) auto;
+}
+.resource-main-row {
+  grid-template-columns: 42px minmax(0, 1fr) minmax(210px, auto);
+}
+.resource-confidence-dot {
+  display: none;
+}
+.primary-actions .button {
+  min-height: 42px;
+  min-width: 96px;
+  justify-content: center;
+  text-align: center;
+}
+.resource-actions {
+  flex-wrap: nowrap;
+}
+@media (max-width: 1100px) {
+  .urgent-compact-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 1000px) {
+  .filter-grid.compact-filter-grid { grid-template-columns: 1fr; }
+  .resource-main-row { grid-template-columns: 42px minmax(0, 1fr); }
+}
+@media (max-width: 720px) {
+  .urgent-compact-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+  .urgent-compact-grid { grid-template-columns: 1fr; }
+  .urgent-card { min-height: auto; }
+  .resource-main-row { grid-template-columns: 1fr; }
+  .resource-actions { width: 100%; }
+  .primary-actions .button { flex: 1; }
+}
