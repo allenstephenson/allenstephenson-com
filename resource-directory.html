@@ -7,85 +7,169 @@
   <title>Midwest City Community Resource Directory Demo | The Digital City</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="resource-directory.css" />
 </head>
-<body>
-  <div class="site-shell directory-page">
-    <header class="site-header" aria-label="Site header">
+<body class="directory-body">
+  <div class="directory-emergency-bar" role="region" aria-label="Emergency and crisis help">
+    <div class="directory-wide emergency-inner">
+      <strong>Need help now?</strong>
+      <span>Call <a href="tel:911">911</a> for emergencies, call or text <a href="tel:988">988</a> for suicide or mental health crisis, or dial <a href="tel:211">211</a> for community referrals.</span>
+      <a href="#featured-urgent">View urgent resources</a>
+    </div>
+  </div>
+
+  <div class="site-shell directory-page directory-wide">
+    <header class="site-header directory-header" aria-label="Site header">
       <a class="brand" href="index.html#top" aria-label="The Digital City home"><span class="brand-mark" aria-hidden="true"></span><span>The Digital City</span></a>
       <nav class="main-nav" aria-label="Primary navigation"><a href="index.html#systems">Systems</a><a href="index.html#articles">Articles</a><a href="index.html#projects">Projects</a><a href="ai.html">AI</a><a href="resource-directory.html" aria-current="page">Resource Directory</a></nav>
     </header>
 
     <main>
-      <section class="directory-hero" aria-labelledby="directory-title">
-        <div>
-          <p class="eyebrow">Concept demo — not an official city service</p>
+      <section class="portal-hero" aria-labelledby="directory-title">
+        <div class="portal-hero-content">
+          <p class="portal-kicker">Concept demo • Midwest City-area services</p>
           <h1 id="directory-title">Midwest City Community Resource Directory</h1>
-          <p class="hero-description">A live demonstration of how an AI-assisted, human-reviewed local resource directory could help Midwest City residents find public benefits, crisis support, food, housing, health care, veterans services, transportation, and other community help.</p>
-          <div class="hero-actions">
-            <a class="button primary" href="#directory-app">Search resources</a>
-            <a class="button secondary" href="#ai-maintenance">AI maintenance workflow</a>
+          <p class="portal-subtitle">Find help with crisis support, mental health, food, housing, utilities, veterans services, seniors, youth and families, transportation, disability services, legal aid, employment, and city services.</p>
+
+          <form class="hero-search-panel" role="search" aria-label="Search community resources">
+            <div class="hero-search-field">
+              <label for="resourceSearch">What do you need help with?</label>
+              <input id="resourceSearch" type="search" placeholder="Search by keyword, organization, service, or need" autocomplete="off" />
+            </div>
+            <div class="hero-category-field">
+              <label for="categoryFilter">Category</label>
+              <select id="categoryFilter"><option value="">All categories</option></select>
+            </div>
+            <button class="button primary directory-search-button" type="submit">Find resources</button>
+          </form>
+
+          <div class="quick-needs" aria-label="Quick need filters">
+            <button type="button" data-quick="Crisis Help">Crisis Help</button>
+            <button type="button" data-quick="Food">Food</button>
+            <button type="button" data-quick="Housing">Housing</button>
+            <button type="button" data-quick="Mental Health">Mental Health</button>
+            <button type="button" data-quick="Utilities">Utilities</button>
+            <button type="button" data-quick="Veterans">Veterans</button>
+            <button type="button" data-quick="Seniors">Seniors</button>
+            <button type="button" data-quick="Youth & Families">Youth &amp; Families</button>
+            <button type="button" data-quick="Transportation">Transportation</button>
+            <button type="button" data-quick="City Services">City Services</button>
           </div>
         </div>
-        <aside class="demo-disclaimer" aria-labelledby="disclaimer-title">
-          <h2 id="disclaimer-title">Important disclaimer</h2>
-          <p>This page is an independent concept/demo for discussion. It is not an official City of Midwest City production service and does not replace 211, agency websites, or direct confirmation with providers.</p>
-          <p><strong>Emergency:</strong> call 911 for immediate danger. For mental health or suicide crisis, call or text 988.</p>
+
+        <aside class="trust-panel" aria-labelledby="trust-title">
+          <h2 id="trust-title">Demo directory notice</h2>
+          <p>This is an independent concept/demo for discussion. It is not an official City of Midwest City production service.</p>
+          <ul>
+            <li>Confirm details directly with each provider.</li>
+            <li>Use 911 for immediate danger.</li>
+            <li>Use 988 for mental health crisis support.</li>
+          </ul>
+          <a class="inline-link" href="#submit-resource">Submit or correct a resource</a>
         </aside>
       </section>
 
-      <section class="section crisis-strip" aria-labelledby="crisis-title">
-        <div class="section-heading">
-          <p class="eyebrow">Start here for urgent needs</p>
-          <h2 id="crisis-title">Emergency & crisis contacts</h2>
-          <p>These high-priority entries stay visible before the searchable directory.</p>
+      <section class="featured-urgent" id="featured-urgent" aria-labelledby="urgent-title">
+        <div class="section-heading compact-heading">
+          <div>
+            <p class="eyebrow">Featured urgent resources</p>
+            <h2 id="urgent-title">Start here when the need is urgent</h2>
+          </div>
         </div>
-        <div id="featuredResources" class="resource-grid"></div>
+        <div id="featuredResources" class="urgent-resource-grid"></div>
       </section>
 
-      <section class="section" id="directory-app" aria-labelledby="search-title">
-        <div class="section-heading">
-          <p class="eyebrow">Searchable directory</p>
-          <h2 id="search-title">Find local and regional help</h2>
-          <p>Filter by category, keyword, and audience/need. Listings include source links and confidence levels so reviewers can quickly see what should be checked next.</p>
+      <section class="directory-portal" id="directory-app" aria-labelledby="browse-title">
+        <div class="directory-title-row">
+          <div>
+            <p class="eyebrow">Browse services</p>
+            <h2 id="browse-title">Community resources</h2>
+          </div>
+          <div class="directory-count-card" aria-live="polite"><strong id="resourceCount">Loading resources…</strong><span>Filtered directory results</span></div>
         </div>
 
-        <form class="directory-controls" role="search" aria-label="Filter community resources">
-          <div class="control-field wide">
-            <label for="resourceSearch">Keyword</label>
-            <input id="resourceSearch" type="search" placeholder="Try food, veterans, housing, youth, utility bill…" autocomplete="off" />
-          </div>
-          <div class="control-field">
-            <label for="categoryFilter">Category</label>
-            <select id="categoryFilter"><option value="">All categories</option></select>
-          </div>
-          <div class="control-field">
-            <label for="audienceFilter">Audience or need</label>
-            <select id="audienceFilter"><option value="">All audiences/needs</option></select>
-          </div>
-        </form>
+        <div class="category-chip-row" id="categoryChips" aria-label="Category shortcuts"></div>
 
-        <div class="directory-summary" aria-live="polite"><strong id="resourceCount">Loading resources…</strong><button class="button secondary small" id="clearFilters" type="button">Clear filters</button></div>
-        <div id="resourceCards" class="resource-grid directory-results"></div>
-        <p class="empty-state" id="resourceEmpty" hidden>No resources match those filters.</p>
+        <div class="directory-layout">
+          <details class="filter-panel" aria-label="Directory filters" open>
+            <summary class="mobile-filter-summary">Filter results</summary>
+            <div class="filter-panel-card" id="desktopFilters">
+              <div class="filter-panel-heading">
+                <span class="filter-icon" aria-hidden="true">☰</span>
+                <div><h3>Refine results</h3><p>Filter by audience, need, and trust signals.</p></div>
+              </div>
+              <div class="control-field">
+                <label for="audienceFilter">Audience or need</label>
+                <select id="audienceFilter"><option value="">All audiences/needs</option></select>
+              </div>
+              <div class="control-field">
+                <label for="confidenceFilter">Confidence</label>
+                <select id="confidenceFilter">
+                  <option value="">All confidence levels</option>
+                  <option value="High">High</option>
+                  <option value="Medium">Medium</option>
+                  <option value="Low">Low</option>
+                </select>
+              </div>
+              <div class="control-field">
+                <label for="sortFilter">Sort by</label>
+                <select id="sortFilter">
+                  <option value="featured">Featured and A–Z</option>
+                  <option value="name">Organization A–Z</option>
+                  <option value="category">Category</option>
+                  <option value="verified">Recently verified</option>
+                  <option value="confidence">Confidence</option>
+                </select>
+              </div>
+              <button class="button secondary small clear-button" id="clearFilters" type="button">Clear all filters</button>
+            </div>
+            <div class="sticky-help-card">
+              <strong>Emergency and crisis help</strong>
+              <p>For immediate danger, call 911. For suicide or mental health crisis, call or text 988. For broad referrals, dial 211.</p>
+            </div>
+          </details>
+
+          <section class="results-panel" aria-label="Directory results">
+            <div id="activeFilters" class="active-filters" aria-live="polite"></div>
+            <div id="resourceCards" class="resource-list directory-results"></div>
+            <p class="empty-state" id="resourceEmpty" hidden>No resources match those filters. Try clearing filters or searching a broader term.</p>
+          </section>
+        </div>
       </section>
 
-      <section class="section split-band ai-maintenance" id="ai-maintenance" aria-labelledby="ai-maintenance-title">
+      <section class="ai-workflow-section" id="ai-maintenance" aria-labelledby="ai-maintenance-title">
+        <div class="section-heading">
+          <p class="eyebrow">AI-assisted, human-approved</p>
+          <h2 id="ai-maintenance-title">How AI keeps this maintained</h2>
+          <p>AI can reduce the manual burden of keeping a resource directory current, but publication decisions should stay in a human review queue.</p>
+        </div>
+        <div class="workflow-grid">
+          <article><span>01</span><h3>Discover resources</h3><p>Scan official websites, 211 listings, agencies, schools, hospitals, and nonprofits for candidate services.</p></article>
+          <article><span>02</span><h3>Check duplicates</h3><p>Compare names, addresses, phone numbers, source domains, and service areas before adding a listing.</p></article>
+          <article><span>03</span><h3>Summarize services</h3><p>Draft plain-language descriptions, hours, eligibility notes, and audience tags from authoritative sources.</p></article>
+          <article><span>04</span><h3>Verify links</h3><p>Check URLs, redirects, status codes, and whether source pages still support the listing.</p></article>
+          <article><span>05</span><h3>Flag stale information</h3><p>Prioritize records with aging verification dates, changed pages, or uncertain phone and hours details.</p></article>
+          <article><span>06</span><h3>Human review before publishing</h3><p>Route proposed additions and edits to staff for approval before residents see updates.</p></article>
+        </div>
+      </section>
+
+      <section class="submit-resource-section" id="submit-resource" aria-labelledby="submit-title">
         <div>
-          <p class="eyebrow">Human-reviewed automation</p>
-          <h2 id="ai-maintenance-title">How AI could maintain the directory</h2>
+          <p class="eyebrow">Future workflow preview</p>
+          <h2 id="submit-title">Submit or correct a resource</h2>
+          <p>This demo does not collect submissions yet, but a production portal could route suggested additions, corrections, and provider updates into a review queue.</p>
         </div>
-        <div class="workflow-list">
+        <div class="submit-demo-card">
+          <h3>Example review queue steps</h3>
           <ol>
-            <li><strong>Find candidate resources</strong> from official websites, 211-style listings, school pages, state agencies, and local nonprofits.</li>
-            <li><strong>Detect duplicates</strong> by comparing names, phone numbers, addresses, service areas, and website domains.</li>
-            <li><strong>Summarize services</strong> into plain-language descriptions with eligibility notes and confidence levels.</li>
-            <li><strong>Check broken links</strong> and flag redirects, timeouts, or pages that no longer mention the listed service.</li>
-            <li><strong>Flag outdated listings</strong> when verification dates get old, hours change, or source pages differ from stored data.</li>
-            <li><strong>Send verification reminders</strong> to assigned staff or partner agencies before high-risk information expires.</li>
-            <li><strong>Use a review queue</strong> so suggested additions and changes are approved by a human before publication.</li>
+            <li>Resident or provider submits an update.</li>
+            <li>AI checks for duplicates and missing fields.</li>
+            <li>Staff reviewer confirms source and eligibility details.</li>
+            <li>Approved change publishes with a new verification date.</li>
           </ol>
+          <button class="button primary" type="button" disabled aria-disabled="true">Demo form coming later</button>
         </div>
       </section>
     </main>
