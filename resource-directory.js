@@ -70,10 +70,24 @@ function telHref(phone) {
   return cleaned ? `tel:${cleaned}` : "#";
 }
 
+function detailRows(resource) {
+  const tags = [...(resource.audiences || []), ...(resource.needs || [])];
+  return `
+    <dl class="resource-details">
+      <div><dt>Location / service area</dt><dd>${resource.address || "Confirm directly"}</dd></div>
+      <div><dt>Hours</dt><dd>${resource.hours || "Confirm directly"}</dd></div>
+      <div><dt>Eligibility</dt><dd>${resource.eligibility || "Confirm directly"}</dd></div>
+      <div><dt>Last verified</dt><dd>${verifiedFormatter.format(new Date(`${resource.lastVerified}T00:00:00`))}</dd></div>
+      <div><dt>Confidence</dt><dd>${resource.confidence || "Confirm directly"}</dd></div>
+      <div><dt>Source</dt><dd><a class="source-link" href="${resource.sourceUrl}" target="_blank" rel="noopener noreferrer">View source</a></dd></div>
+    </dl>
+    <div class="tag-list">${tags.slice(0, 10).map((tag) => `<span>${tag}</span>`).join("")}</div>
+  `;
+}
+
 function createResourceCard(resource, options = {}) {
   const card = document.createElement("article");
   card.className = `resource-card portal-resource-card confidence-${normalize(resource.confidence)}${options.compact ? " compact-resource-card" : ""}`;
-  const tags = [...(resource.audiences || []), ...(resource.needs || [])].slice(0, options.compact ? 4 : 8);
 
   card.innerHTML = `
     <div class="resource-main-row">
@@ -81,26 +95,17 @@ function createResourceCard(resource, options = {}) {
       <div class="resource-content">
         <div class="resource-card-header">
           <span class="category">${resource.category}</span>
-          <span class="confidence">${resource.confidence} confidence</span>
+          ${options.compact ? "" : `<span class="resource-confidence-dot">${resource.confidence} confidence</span>`}
         </div>
         <h3>${resource.name}</h3>
         <p>${resource.description}</p>
       </div>
+      <div class="resource-actions primary-actions">
+        <a class="button primary small" href="${resource.website}" target="_blank" rel="noopener noreferrer">Visit Website</a>
+        ${resource.phone ? `<a class="button secondary small call-button" href="${telHref(resource.phone)}">Call</a>` : ""}
+      </div>
     </div>
-    <div class="resource-actions primary-actions">
-      <a class="button call-button small" href="${telHref(resource.phone)}">Call ${resource.phone || "provider"}</a>
-      <a class="button primary small" href="${resource.website}" target="_blank" rel="noopener noreferrer">Visit website</a>
-    </div>
-    <dl class="resource-details">
-      <div><dt>Location / service area</dt><dd>${resource.address || "Confirm directly"}</dd></div>
-      <div><dt>Hours</dt><dd>${resource.hours || "Confirm directly"}</dd></div>
-      <div><dt>Eligibility</dt><dd>${resource.eligibility || "Confirm directly"}</dd></div>
-      <div><dt>Last verified</dt><dd>${verifiedFormatter.format(new Date(`${resource.lastVerified}T00:00:00`))}</dd></div>
-    </dl>
-    <div class="tag-list">${tags.map((tag) => `<span>${tag}</span>`).join("")}</div>
-    <div class="resource-actions secondary-actions">
-      <a class="source-link" href="${resource.sourceUrl}" target="_blank" rel="noopener noreferrer">View source</a>
-    </div>
+    ${options.compact ? "" : `<details class="resource-extra"><summary>Details</summary>${detailRows(resource)}</details>`}
   `;
   return card;
 }
@@ -123,6 +128,7 @@ function populateFilters() {
 function renderCategoryChips() {
   const container = document.getElementById("categoryChips");
   if (!container) return;
+  container.replaceChildren();
 
   const categories = uniqueSorted(resources.map((resource) => resource.category));
   const all = document.createElement("button");
@@ -215,6 +221,10 @@ function applyFilters() {
   count.textContent = `${filtered.length} of ${resources.length} resources shown`;
   renderActiveFilters(filtered.length);
   updateCategoryChipState();
+
+  document.querySelectorAll(".quick-needs button").forEach((button) => {
+    button.classList.toggle("active", button.dataset.quick === currentQuickNeed);
+  });
 }
 
 function renderFeatured() {
@@ -223,7 +233,7 @@ function renderFeatured() {
 }
 
 function wireEvents() {
-  document.querySelector(".hero-search-panel").addEventListener("submit", (event) => {
+  document.querySelector(".finder-search").addEventListener("submit", (event) => {
     event.preventDefault();
     currentQuickNeed = "";
     applyFilters();
