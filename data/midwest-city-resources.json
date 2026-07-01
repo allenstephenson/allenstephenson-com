@@ -2,8 +2,16 @@
   {
     "name": "Emergency: 911",
     "category": "Crisis & Emergency",
-    "audiences": ["Everyone", "Emergency"],
-    "needs": ["police", "fire", "medical", "emergency"],
+    "audiences": [
+      "Everyone",
+      "Emergency"
+    ],
+    "needs": [
+      "police",
+      "fire",
+      "medical",
+      "emergency"
+    ],
     "description": "For immediate danger, crimes in progress, fires, serious injuries, or other life-threatening emergencies in Midwest City.",
     "phone": "911",
     "website": "https://www.midwestcityok.org/445/Emergency-Communications-9-1-1",
@@ -18,8 +26,17 @@
   {
     "name": "988 Suicide & Crisis Lifeline",
     "category": "Crisis & Emergency",
-    "audiences": ["Everyone", "Youth", "Veterans", "Behavioral health"],
-    "needs": ["mental health crisis", "suicide prevention", "substance use crisis"],
+    "audiences": [
+      "Everyone",
+      "Youth",
+      "Veterans",
+      "Behavioral health"
+    ],
+    "needs": [
+      "mental health crisis",
+      "suicide prevention",
+      "substance use crisis"
+    ],
     "description": "Free, confidential crisis support for people experiencing suicidal thoughts, mental health distress, substance-use crisis, or concern for someone else.",
     "phone": "988",
     "website": "https://988lifeline.org/",
@@ -34,8 +51,15 @@
   {
     "name": "Oklahoma 988 Mental Health Lifeline / ODMHSAS",
     "category": "Mental Health & Substance Use",
-    "audiences": ["Everyone", "Behavioral health"],
-    "needs": ["mental health crisis", "substance use", "referrals"],
+    "audiences": [
+      "Everyone",
+      "Behavioral health"
+    ],
+    "needs": [
+      "mental health crisis",
+      "substance use",
+      "referrals"
+    ],
     "description": "Oklahoma's behavioral health crisis connection for mental health and substance-use support, linked to the national 988 lifeline.",
     "phone": "988",
     "website": "https://oklahoma.gov/odmhsas.html",
@@ -50,8 +74,17 @@
   {
     "name": "Oklahoma 211 / HeartLine",
     "category": "Navigation & Referrals",
-    "audiences": ["Everyone"],
-    "needs": ["food", "housing", "utilities", "health", "transportation", "referrals"],
+    "audiences": [
+      "Everyone"
+    ],
+    "needs": [
+      "food",
+      "housing",
+      "utilities",
+      "health",
+      "transportation",
+      "referrals"
+    ],
     "description": "Free information and referral service connecting Oklahomans with health and human services, including food, shelter, utility help, and other local programs.",
     "phone": "211",
     "website": "https://heartlineoklahoma.org/211/",
@@ -66,8 +99,15 @@
   {
     "name": "National Domestic Violence Hotline",
     "category": "Crisis & Emergency",
-    "audiences": ["Survivors", "Families"],
-    "needs": ["domestic violence", "safety planning", "crisis"],
+    "audiences": [
+      "Survivors",
+      "Families"
+    ],
+    "needs": [
+      "domestic violence",
+      "safety planning",
+      "crisis"
+    ],
     "description": "Confidential support, safety planning, and connection to local domestic violence resources by phone, chat, or text.",
     "phone": "800-799-7233",
     "website": "https://www.thehotline.org/",
@@ -82,8 +122,15 @@
   {
     "name": "Midwest City Police Department Non-Emergency",
     "category": "City Services",
-    "audiences": ["Residents", "Businesses"],
-    "needs": ["police", "public safety", "reports"],
+    "audiences": [
+      "Residents",
+      "Businesses"
+    ],
+    "needs": [
+      "police",
+      "public safety",
+      "reports"
+    ],
     "description": "Non-emergency police assistance and information for matters that do not require immediate 911 response.",
     "phone": "405-732-2266",
     "website": "https://www.midwestcityok.org/180/Police-Department",
@@ -97,8 +144,17 @@
   {
     "name": "City of Midwest City Main Services",
     "category": "City Services",
-    "audiences": ["Residents", "Businesses"],
-    "needs": ["utilities", "permits", "code", "animal welfare", "city hall"],
+    "audiences": [
+      "Residents",
+      "Businesses"
+    ],
+    "needs": [
+      "utilities",
+      "permits",
+      "code",
+      "animal welfare",
+      "city hall"
+    ],
     "description": "Official city entry point for municipal services, departments, utility information, permits, court, animal welfare, agendas, and contact information.",
     "phone": "405-732-2281",
     "website": "https://www.midwestcityok.org/101/Services",
@@ -112,8 +168,16 @@
   {
     "name": "Midwest City Utility Customer Service",
     "category": "Utilities & Financial Help",
-    "audiences": ["Residents", "Businesses"],
-    "needs": ["water", "utility billing", "start service", "transfer service"],
+    "audiences": [
+      "Residents",
+      "Businesses"
+    ],
+    "needs": [
+      "water",
+      "utility billing",
+      "start service",
+      "transfer service"
+    ],
     "description": "City utility customer service for starting, stopping, transferring, and asking questions about utility services.",
     "phone": "405-739-1252",
     "website": "https://www.midwestcityok.org/219/New-Termination-or-Transfer-of-Services",
@@ -127,8 +191,16 @@
   {
     "name": "Midwest City Environmental Services",
     "category": "City Services",
-    "audiences": ["Residents"],
-    "needs": ["trash", "recycling", "bulk pickup", "compost", "sanitation"],
+    "audiences": [
+      "Residents"
+    ],
+    "needs": [
+      "trash",
+      "recycling",
+      "bulk pickup",
+      "compost",
+      "sanitation"
+    ],
     "description": "City information for sanitation, recycling, bulk pickup, compost, landfill, and household hazardous waste topics.",
     "phone": "405-739-1060",
     "website": "https://www.midwestcityok.org/208/Environmental-Services",
@@ -142,8 +214,20 @@
   {
     "name": "Oklahoma Human Services",
     "category": "Public Benefits",
-    "audiences": ["Families", "Seniors", "People with disabilities", "Residents"],
-    "needs": ["SNAP", "food benefits", "child care", "child support", "adult protective services", "developmental disabilities"],
+    "audiences": [
+      "Families",
+      "Seniors",
+      "People with disabilities",
+      "Residents"
+    ],
+    "needs": [
+      "SNAP",
+      "food benefits",
+      "child care",
+      "child support",
+      "adult protective services",
+      "developmental disabilities"
+    ],
     "description": "State agency providing access to benefits and services such as food assistance, child care, child support, abuse reporting, disability services, and caretaker supports.",
     "phone": "405-522-5050",
     "website": "https://oklahoma.gov/okdhs.html",
@@ -157,8 +241,17 @@
   {
     "name": "Oklahoma County Social Services",
     "category": "Utilities & Financial Help",
-    "audiences": ["Residents", "Seniors", "Families"],
-    "needs": ["utility assistance", "prescriptions", "burial assistance", "county services"],
+    "audiences": [
+      "Residents",
+      "Seniors",
+      "Families"
+    ],
+    "needs": [
+      "utility assistance",
+      "prescriptions",
+      "burial assistance",
+      "county services"
+    ],
     "description": "Oklahoma County department offering limited assistance programs and referrals for eligible county residents.",
     "phone": "405-713-1893",
     "website": "https://www.oklahomacounty.org/departments/social-services",
@@ -172,8 +265,15 @@
   {
     "name": "Mission Mid-Del Master's Market",
     "category": "Food & Basic Needs",
-    "audiences": ["Families", "Residents"],
-    "needs": ["food pantry", "clothing", "household items"],
+    "audiences": [
+      "Families",
+      "Residents"
+    ],
+    "needs": [
+      "food pantry",
+      "clothing",
+      "household items"
+    ],
     "description": "Local pantry offering food, clothing, and household items for residents in Midwest City, Del City, Nicoma Park, Spencer, Choctaw, and parts of east Oklahoma City.",
     "phone": "405-737-2010",
     "website": "https://missionmiddel.org/",
@@ -187,8 +287,16 @@
   {
     "name": "Regional Food Bank of Oklahoma",
     "category": "Food & Basic Needs",
-    "audiences": ["Families", "Seniors", "Residents"],
-    "needs": ["food pantry locator", "food assistance", "senior food"],
+    "audiences": [
+      "Families",
+      "Seniors",
+      "Residents"
+    ],
+    "needs": [
+      "food pantry locator",
+      "food assistance",
+      "senior food"
+    ],
     "description": "Regional hunger-relief organization with a partner network and online tools to locate food assistance near a household.",
     "phone": "405-972-1111",
     "website": "https://www.regionalfoodbank.org/",
@@ -202,8 +310,17 @@
   {
     "name": "Oklahoma Housing Finance Agency",
     "category": "Housing & Shelter",
-    "audiences": ["Renters", "Homebuyers", "Residents"],
-    "needs": ["rental assistance", "housing vouchers", "homebuyer programs", "affordable housing"],
+    "audiences": [
+      "Renters",
+      "Homebuyers",
+      "Residents"
+    ],
+    "needs": [
+      "rental assistance",
+      "housing vouchers",
+      "homebuyer programs",
+      "affordable housing"
+    ],
     "description": "State housing finance agency administering affordable housing, rental assistance, and homebuyer programs in Oklahoma.",
     "phone": "405-848-1144",
     "website": "https://www.ohfa.org/",
@@ -217,8 +334,16 @@
   {
     "name": "Homeless Alliance",
     "category": "Housing & Shelter",
-    "audiences": ["People experiencing homelessness", "Adults"],
-    "needs": ["homeless services", "day shelter", "housing navigation", "basic needs"],
+    "audiences": [
+      "People experiencing homelessness",
+      "Adults"
+    ],
+    "needs": [
+      "homeless services",
+      "day shelter",
+      "housing navigation",
+      "basic needs"
+    ],
     "description": "Oklahoma City nonprofit coordinating services, basic-needs support, and housing-focused assistance for people experiencing homelessness.",
     "phone": "405-415-8410",
     "website": "https://www.homelessalliance.org/",
@@ -232,8 +357,15 @@
   {
     "name": "City Care Night Shelter",
     "category": "Housing & Shelter",
-    "audiences": ["People experiencing homelessness", "Adults"],
-    "needs": ["emergency shelter", "meals", "homeless services"],
+    "audiences": [
+      "People experiencing homelessness",
+      "Adults"
+    ],
+    "needs": [
+      "emergency shelter",
+      "meals",
+      "homeless services"
+    ],
     "description": "Oklahoma City shelter and supportive-services provider for adults experiencing homelessness.",
     "phone": "405-724-8439",
     "website": "https://citycareokc.org/",
@@ -247,8 +379,17 @@
   {
     "name": "Mental Health Association Oklahoma - Oklahoma City Area Services",
     "category": "Mental Health & Substance Use",
-    "audiences": ["Adults", "Behavioral health", "People experiencing homelessness"],
-    "needs": ["mental health", "housing support", "peer support", "basic needs"],
+    "audiences": [
+      "Adults",
+      "Behavioral health",
+      "People experiencing homelessness"
+    ],
+    "needs": [
+      "mental health",
+      "housing support",
+      "peer support",
+      "basic needs"
+    ],
     "description": "Nonprofit offering mental-health advocacy, housing supports, peer services, and community resource information in Oklahoma.",
     "phone": "405-943-3700",
     "website": "https://mhaok.org/",
@@ -262,8 +403,18 @@
   {
     "name": "NorthCare",
     "category": "Mental Health & Substance Use",
-    "audiences": ["Adults", "Youth", "Families", "Behavioral health"],
-    "needs": ["counseling", "case management", "substance use", "crisis services"],
+    "audiences": [
+      "Adults",
+      "Youth",
+      "Families",
+      "Behavioral health"
+    ],
+    "needs": [
+      "counseling",
+      "case management",
+      "substance use",
+      "crisis services"
+    ],
     "description": "Certified community behavioral-health provider serving central Oklahoma with mental-health and substance-use services for adults, children, and families.",
     "phone": "405-858-2700",
     "website": "https://www.northcare.com/",
@@ -277,8 +428,17 @@
   {
     "name": "Red Rock Behavioral Health Services",
     "category": "Mental Health & Substance Use",
-    "audiences": ["Adults", "Youth", "Behavioral health"],
-    "needs": ["mental health", "substance use", "crisis", "case management"],
+    "audiences": [
+      "Adults",
+      "Youth",
+      "Behavioral health"
+    ],
+    "needs": [
+      "mental health",
+      "substance use",
+      "crisis",
+      "case management"
+    ],
     "description": "Community behavioral-health organization with outpatient, crisis, and recovery services in Oklahoma communities.",
     "phone": "405-424-7711",
     "website": "https://www.red-rock.com/",
@@ -292,8 +452,15 @@
   {
     "name": "SSM Health St. Anthony Hospital - Midwest",
     "category": "Health Care",
-    "audiences": ["Residents", "Patients"],
-    "needs": ["hospital", "emergency care", "medical care"],
+    "audiences": [
+      "Residents",
+      "Patients"
+    ],
+    "needs": [
+      "hospital",
+      "emergency care",
+      "medical care"
+    ],
     "description": "Hospital in Midwest City offering emergency and medical services for the surrounding area.",
     "phone": "405-610-4411",
     "website": "https://www.ssmhealth.com/locations/location-details/st-anthony-hospital-midwest",
@@ -307,8 +474,18 @@
   {
     "name": "Oklahoma City-County Health Department",
     "category": "Health Care",
-    "audiences": ["Residents", "Families", "Youth"],
-    "needs": ["public health", "immunizations", "WIC", "clinic services", "health education"],
+    "audiences": [
+      "Residents",
+      "Families",
+      "Youth"
+    ],
+    "needs": [
+      "public health",
+      "immunizations",
+      "WIC",
+      "clinic services",
+      "health education"
+    ],
     "description": "Public health department serving Oklahoma City and Oklahoma County with clinic, prevention, WIC, immunization, and community-health services.",
     "phone": "405-425-4437",
     "website": "https://www.occhd.org/",
@@ -322,8 +499,17 @@
   {
     "name": "Mid-Del Public Schools Family Support / District Resources",
     "category": "Youth & Family",
-    "audiences": ["Students", "Families", "Youth"],
-    "needs": ["schools", "student support", "family resources", "enrollment"],
+    "audiences": [
+      "Students",
+      "Families",
+      "Youth"
+    ],
+    "needs": [
+      "schools",
+      "student support",
+      "family resources",
+      "enrollment"
+    ],
     "description": "Public school district serving Midwest City, Del City, and surrounding areas; district offices and school staff can connect families with student supports and local resources.",
     "phone": "405-737-4461",
     "website": "https://www.mid-del.net/",
@@ -337,8 +523,17 @@
   {
     "name": "Rose State College Student Resources",
     "category": "Education & Employment",
-    "audiences": ["Students", "Adults", "Job seekers"],
-    "needs": ["education", "workforce", "student support", "career training"],
+    "audiences": [
+      "Students",
+      "Adults",
+      "Job seekers"
+    ],
+    "needs": [
+      "education",
+      "workforce",
+      "student support",
+      "career training"
+    ],
     "description": "Community college in Midwest City offering academic programs, workforce training, student services, and community resources.",
     "phone": "405-733-7673",
     "website": "https://www.rose.edu/",
@@ -352,8 +547,18 @@
   {
     "name": "Tinker AFB Military & Family Readiness Center",
     "category": "Veterans & Military",
-    "audiences": ["Military", "Veterans", "Families"],
-    "needs": ["military family support", "transition", "counseling", "employment", "financial readiness"],
+    "audiences": [
+      "Military",
+      "Veterans",
+      "Families"
+    ],
+    "needs": [
+      "military family support",
+      "transition",
+      "counseling",
+      "employment",
+      "financial readiness"
+    ],
     "description": "Support center for Tinker personnel and families with readiness consultations, workshops, transition support, and family assistance programs.",
     "phone": "405-739-2747",
     "website": "https://tinkerliving.com/military-family-readiness-center/",
@@ -367,8 +572,19 @@
   {
     "name": "Tinker AFB Helping Agencies",
     "category": "Veterans & Military",
-    "audiences": ["Military", "Veterans", "Families", "Civilian employees"],
-    "needs": ["base helping agencies", "counseling", "chaplain", "employee assistance", "family support"],
+    "audiences": [
+      "Military",
+      "Veterans",
+      "Families",
+      "Civilian employees"
+    ],
+    "needs": [
+      "base helping agencies",
+      "counseling",
+      "chaplain",
+      "employee assistance",
+      "family support"
+    ],
     "description": "Official Tinker AFB directory page listing helping agencies and support contacts for the Tinker community.",
     "phone": "405-739-2747",
     "website": "https://www.tinker.af.mil/Resources/Tinker-Helping-Agencies/",
@@ -382,8 +598,15 @@
   {
     "name": "Oklahoma Department of Veterans Affairs",
     "category": "Veterans & Military",
-    "audiences": ["Veterans", "Military families"],
-    "needs": ["veterans benefits", "claims", "state veterans services"],
+    "audiences": [
+      "Veterans",
+      "Military families"
+    ],
+    "needs": [
+      "veterans benefits",
+      "claims",
+      "state veterans services"
+    ],
     "description": "State agency helping Oklahoma veterans and families with benefits information, claims support, and veterans services.",
     "phone": "405-523-4000",
     "website": "https://oklahoma.gov/veterans.html",
@@ -397,8 +620,18 @@
   {
     "name": "Embark Public Transit",
     "category": "Transportation",
-    "audiences": ["Residents", "Seniors", "People with disabilities", "Job seekers"],
-    "needs": ["bus", "transit", "paratransit", "transportation"],
+    "audiences": [
+      "Residents",
+      "Seniors",
+      "People with disabilities",
+      "Job seekers"
+    ],
+    "needs": [
+      "bus",
+      "transit",
+      "paratransit",
+      "transportation"
+    ],
     "description": "Oklahoma City metro public transit provider with bus, mobility, and trip-planning information; service availability near Midwest City should be confirmed by route.",
     "phone": "405-235-7433",
     "website": "https://www.embarkok.com/",
@@ -412,8 +645,17 @@
   {
     "name": "Areawide Aging Agency",
     "category": "Senior Services",
-    "audiences": ["Seniors", "Caregivers", "People with disabilities"],
-    "needs": ["aging services", "caregiver support", "senior information", "ADvantage"],
+    "audiences": [
+      "Seniors",
+      "Caregivers",
+      "People with disabilities"
+    ],
+    "needs": [
+      "aging services",
+      "caregiver support",
+      "senior information",
+      "ADvantage"
+    ],
     "description": "Area agency on aging for central Oklahoma offering information, assistance, caregiver support, and connections to senior services.",
     "phone": "405-942-8500",
     "website": "https://www.areawideaging.org/",
@@ -427,8 +669,17 @@
   {
     "name": "Oklahoma Department of Rehabilitation Services",
     "category": "Disability Services",
-    "audiences": ["People with disabilities", "Job seekers", "Students"],
-    "needs": ["vocational rehabilitation", "disability employment", "visual services", "deaf services"],
+    "audiences": [
+      "People with disabilities",
+      "Job seekers",
+      "Students"
+    ],
+    "needs": [
+      "vocational rehabilitation",
+      "disability employment",
+      "visual services",
+      "deaf services"
+    ],
     "description": "State agency helping Oklahomans with disabilities prepare for employment, independent living, and access to specialized services.",
     "phone": "800-845-8476",
     "website": "https://oklahoma.gov/okdrs.html",
@@ -442,8 +693,19 @@
   {
     "name": "Legal Aid Services of Oklahoma",
     "category": "Legal Aid",
-    "audiences": ["Residents", "Seniors", "Survivors", "Families"],
-    "needs": ["civil legal help", "housing legal help", "family law", "benefits", "consumer issues"],
+    "audiences": [
+      "Residents",
+      "Seniors",
+      "Survivors",
+      "Families"
+    ],
+    "needs": [
+      "civil legal help",
+      "housing legal help",
+      "family law",
+      "benefits",
+      "consumer issues"
+    ],
     "description": "Nonprofit legal-aid organization providing free civil legal help and self-help information for eligible low-income Oklahomans.",
     "phone": "888-534-5243",
     "website": "https://legalaidok.org/",
@@ -457,8 +719,18 @@
   {
     "name": "Oklahoma City YWCA Domestic Violence Services",
     "category": "Domestic Violence & Safety",
-    "audiences": ["Survivors", "Families", "Youth"],
-    "needs": ["domestic violence", "sexual assault", "shelter", "advocacy", "crisis"],
+    "audiences": [
+      "Survivors",
+      "Families",
+      "Youth"
+    ],
+    "needs": [
+      "domestic violence",
+      "sexual assault",
+      "shelter",
+      "advocacy",
+      "crisis"
+    ],
     "description": "Oklahoma City nonprofit providing domestic violence, sexual assault, advocacy, and crisis support services.",
     "phone": "405-917-9922",
     "website": "https://www.ywcaokc.org/",
@@ -472,8 +744,17 @@
   {
     "name": "Oklahoma Employment Security Commission / Oklahoma Works",
     "category": "Education & Employment",
-    "audiences": ["Job seekers", "Employers", "Veterans"],
-    "needs": ["jobs", "unemployment", "workforce services", "career center"],
+    "audiences": [
+      "Job seekers",
+      "Employers",
+      "Veterans"
+    ],
+    "needs": [
+      "jobs",
+      "unemployment",
+      "workforce services",
+      "career center"
+    ],
     "description": "State workforce agency and Oklahoma Works system for job search, unemployment information, employer services, and workforce resources.",
     "phone": "405-557-7100",
     "website": "https://oklahoma.gov/oesc.html",
@@ -487,8 +768,17 @@
   {
     "name": "Work Ready Oklahoma",
     "category": "Education & Employment",
-    "audiences": ["Job seekers", "Adults", "Families"],
-    "needs": ["job readiness", "coaching", "employment training", "career support"],
+    "audiences": [
+      "Job seekers",
+      "Adults",
+      "Families"
+    ],
+    "needs": [
+      "job readiness",
+      "coaching",
+      "employment training",
+      "career support"
+    ],
     "description": "Oklahoma nonprofit offering work-readiness training, coaching, and employment support for people working toward stable employment.",
     "phone": "405-635-1933",
     "website": "https://workreadyoklahoma.com/",
@@ -502,23 +792,43 @@
   {
     "name": "Catholic Charities of the Archdiocese of Oklahoma City",
     "category": "Family & Community Support",
-    "audiences": ["Families", "Immigrants", "Residents"],
-    "needs": ["counseling", "family support", "immigration legal services", "disaster support"],
-    "description": "Established nonprofit providing counseling, family support, immigration legal services, disaster support, and other community programs in central Oklahoma.",
+    "audiences": [
+      "Families",
+      "Immigrants",
+      "Residents"
+    ],
+    "needs": [
+      "counseling",
+      "disaster support",
+      "family support",
+      "immigration legal services",
+      "rental assistance",
+      "utility assistance"
+    ],
+    "description": "Provides immigration, adoption, disaster, family support, and limited rental or utility assistance referrals and programs in the Oklahoma City area.",
     "phone": "405-523-3000",
     "website": "https://catholiccharitiesok.org/",
     "address": "1232 N Classen Blvd, Oklahoma City, OK 73106",
     "hours": "Check website or call for program-specific hours.",
     "eligibility": "Varies by program; some services may have fees, income rules, or appointment requirements.",
     "lastVerified": "2026-07-01",
-    "sourceUrl": "https://catholiccharitiesok.org/",
+    "sourceUrl": "https://www.catholiccharitiesok.org/",
     "confidence": "High"
   },
   {
     "name": "Community Action Agency of Oklahoma City & Oklahoma/Canadian Counties",
     "category": "Utilities & Financial Help",
-    "audiences": ["Families", "Residents", "Seniors"],
-    "needs": ["community action", "financial assistance", "weatherization", "housing support"],
+    "audiences": [
+      "Families",
+      "Residents",
+      "Seniors"
+    ],
+    "needs": [
+      "community action",
+      "financial assistance",
+      "weatherization",
+      "housing support"
+    ],
     "description": "Community action agency serving Oklahoma County residents with anti-poverty programs and referrals; assistance depends on funding and eligibility.",
     "phone": "405-232-0199",
     "website": "https://caaofokc.org/",
@@ -528,5 +838,771 @@
     "lastVerified": "2026-07-01",
     "sourceUrl": "https://caaofokc.org/",
     "confidence": "Medium"
+  },
+  {
+    "name": "Midwest City Neighborhoods In Action",
+    "category": "Family & Community Support",
+    "audiences": [
+      "Families",
+      "Youth",
+      "Veterans",
+      "Residents"
+    ],
+    "needs": [
+      "tutoring",
+      "food",
+      "tax assistance",
+      "GED referrals",
+      "community programs",
+      "veterans",
+      "bus passes"
+    ],
+    "description": "City facility offering K-5 tutoring, VITA tax help, GED referrals, food giveaways, veterans assistance days, community programs, Head Start meetings, and bus pass distribution.",
+    "phone": "405-736-1973",
+    "website": "https://www.midwestcityok.org/431/Neighborhoods-In-Action",
+    "address": "1124 N Douglas Boulevard, Midwest City, OK",
+    "hours": "Facility hours: Monday-Thursday 7:30 am-5:30 pm; Friday 7:30-11:30 am",
+    "eligibility": "Programs vary; contact Neighborhoods In Action for current availability.",
+    "lastVerified": "2026-07-01",
+    "sourceUrl": "https://www.midwestcityok.org/431/Neighborhoods-In-Action",
+    "confidence": "High"
+  },
+  {
+    "name": "Midwest City Neighborhood Initiative",
+    "category": "Family & Community Support",
+    "audiences": [
+      "Residents",
+      "Neighborhoods"
+    ],
+    "needs": [
+      "neighborhood resources",
+      "outreach",
+      "food drives",
+      "volunteer groups",
+      "neighborhood associations"
+    ],
+    "description": "City program connecting residents with neighborhood resources, outreach events, food drives, volunteer groups, and neighborhood association support.",
+    "phone": "405-739-1012",
+    "website": "https://www.midwestcityok.org/170/Neighborhood-Initiative",
+    "address": "8726 SE 15th Street, Charles J. Johnson Building, Midwest City, OK 73110",
+    "hours": "Call ahead to confirm hours.",
+    "eligibility": "Midwest City residents and neighborhood groups.",
+    "lastVerified": "2026-07-01",
+    "sourceUrl": "https://www.midwestcityok.org/170/Neighborhood-Initiative",
+    "confidence": "High"
+  },
+  {
+    "name": "Midwest City Housing Rehabilitation Program",
+    "category": "Housing & Shelter",
+    "audiences": [
+      "Homeowners",
+      "Homebuyers",
+      "Families",
+      "Residents"
+    ],
+    "needs": [
+      "home repair",
+      "housing rehabilitation",
+      "low/moderate income homeowners"
+    ],
+    "description": "City interest-free loan program helping low- and moderate-income homeowners improve their homes.",
+    "phone": "405-739-1216",
+    "website": "https://www.midwestcityok.org/433/Housing-Resources",
+    "address": "100 N Midwest Boulevard, Midwest City, OK 73110",
+    "hours": "Monday-Thursday 7:30 am-5:30 pm; Friday 7:30-11:30 am",
+    "eligibility": "Contact Grants Management for eligibility and funding availability.",
+    "lastVerified": "2026-07-01",
+    "sourceUrl": "https://www.midwestcityok.org/433/Housing-Resources",
+    "confidence": "High"
+  },
+  {
+    "name": "Midwest City Primary Systems Home Repair",
+    "category": "Housing & Shelter",
+    "audiences": [
+      "Homeowners",
+      "Homebuyers",
+      "Families",
+      "Residents"
+    ],
+    "needs": [
+      "emergency home repair",
+      "low-income homeowners",
+      "primary systems repair"
+    ],
+    "description": "City grant program for low-income homeowners with emergency repairs to failed primary home systems.",
+    "phone": "405-739-1216",
+    "website": "https://www.midwestcityok.org/433/Housing-Resources",
+    "address": "100 N Midwest Boulevard, Midwest City, OK 73110",
+    "hours": "Monday-Thursday 7:30 am-5:30 pm; Friday 7:30-11:30 am",
+    "eligibility": "Contact Grants Management for eligibility and funding availability.",
+    "lastVerified": "2026-07-01",
+    "sourceUrl": "https://www.midwestcityok.org/433/Housing-Resources",
+    "confidence": "High"
+  },
+  {
+    "name": "Midwest City Homebuyer Assistance Program",
+    "category": "Housing & Shelter",
+    "audiences": [
+      "Homeowners",
+      "Homebuyers",
+      "Families",
+      "Residents"
+    ],
+    "needs": [
+      "homebuyer assistance",
+      "down payment",
+      "closing costs"
+    ],
+    "description": "City deferred-loan program that may help qualified homebuyers with closing costs and part of a down payment.",
+    "phone": "405-739-1216",
+    "website": "https://www.midwestcityok.org/433/Housing-Resources",
+    "address": "100 N Midwest Boulevard, Midwest City, OK 73110",
+    "hours": "Monday-Thursday 7:30 am-5:30 pm; Friday 7:30-11:30 am",
+    "eligibility": "Contact Grants Management for eligibility and funding availability.",
+    "lastVerified": "2026-07-01",
+    "sourceUrl": "https://www.midwestcityok.org/433/Housing-Resources",
+    "confidence": "High"
+  },
+  {
+    "name": "Midwest City Purchase/Rehabilitation/Infill Program",
+    "category": "Housing & Shelter",
+    "audiences": [
+      "Homeowners",
+      "Homebuyers",
+      "Families",
+      "Residents"
+    ],
+    "needs": [
+      "affordable housing",
+      "rehabilitation",
+      "infill housing"
+    ],
+    "description": "City program supporting purchase, rehabilitation, reconstruction, or infill development of affordable housing when funding and lots are available.",
+    "phone": "405-739-1216",
+    "website": "https://www.midwestcityok.org/433/Housing-Resources",
+    "address": "100 N Midwest Boulevard, Midwest City, OK 73110",
+    "hours": "Monday-Thursday 7:30 am-5:30 pm; Friday 7:30-11:30 am",
+    "eligibility": "Contact Grants Management for eligibility and funding availability.",
+    "lastVerified": "2026-07-01",
+    "sourceUrl": "https://www.midwestcityok.org/433/Housing-Resources",
+    "confidence": "High"
+  },
+  {
+    "name": "Midwest City Slum/Blight Improvement Program",
+    "category": "Housing & Shelter",
+    "audiences": [
+      "Homeowners",
+      "Homebuyers",
+      "Families",
+      "Residents"
+    ],
+    "needs": [
+      "blight",
+      "code enforcement",
+      "demolition",
+      "clearance",
+      "neighborhood improvement"
+    ],
+    "description": "City program supporting code enforcement work on distressed properties, including acquisition, limited rehabilitation, demolition, or clearance.",
+    "phone": "405-739-1216",
+    "website": "https://www.midwestcityok.org/433/Housing-Resources",
+    "address": "100 N Midwest Boulevard, Midwest City, OK 73110",
+    "hours": "Monday-Thursday 7:30 am-5:30 pm; Friday 7:30-11:30 am",
+    "eligibility": "Contact Grants Management for eligibility and funding availability.",
+    "lastVerified": "2026-07-01",
+    "sourceUrl": "https://www.midwestcityok.org/433/Housing-Resources",
+    "confidence": "High"
+  },
+  {
+    "name": "Midwest City Transitional Housing Program",
+    "category": "Housing & Shelter",
+    "audiences": [
+      "Homeowners",
+      "Homebuyers",
+      "Families",
+      "Residents"
+    ],
+    "needs": [
+      "transitional housing",
+      "homeless families",
+      "case management",
+      "life skills"
+    ],
+    "description": "City-supported transitional housing through single-family properties with nonprofit partners providing case management and life-skills support.",
+    "phone": "405-739-1216",
+    "website": "https://www.midwestcityok.org/433/Housing-Resources",
+    "address": "100 N Midwest Boulevard, Midwest City, OK 73110",
+    "hours": "Monday-Thursday 7:30 am-5:30 pm; Friday 7:30-11:30 am",
+    "eligibility": "Contact Grants Management for eligibility and funding availability.",
+    "lastVerified": "2026-07-01",
+    "sourceUrl": "https://www.midwestcityok.org/433/Housing-Resources",
+    "confidence": "High"
+  },
+  {
+    "name": "K-5 Math and Reading Tutoring Program",
+    "category": "Education & Employment",
+    "audiences": [
+      "Children",
+      "Families",
+      "Students"
+    ],
+    "needs": [
+      "tutoring",
+      "reading",
+      "math",
+      "K-5",
+      "academic support"
+    ],
+    "description": "Math and reading tutoring for Midwest City K-5 students who are behind academically.",
+    "phone": "405-736-1973",
+    "website": "https://www.midwestcityok.org/191/Community-Service-Programs",
+    "address": "Neighborhoods In Action, Midwest City, OK",
+    "hours": "Call ahead to confirm hours.",
+    "eligibility": "Children must be Midwest City residents.",
+    "lastVerified": "2026-07-01",
+    "sourceUrl": "https://www.midwestcityok.org/191/Community-Service-Programs",
+    "confidence": "High"
+  },
+  {
+    "name": "Mid-Del Youth and Family Center At-Risk Youth/Family Program",
+    "category": "Youth & Family",
+    "audiences": [
+      "Youth",
+      "Families"
+    ],
+    "needs": [
+      "youth counseling",
+      "family counseling",
+      "outreach",
+      "behavioral health"
+    ],
+    "description": "Outreach and counseling program supporting mentally and physically healthy children and families.",
+    "phone": "405-733-5437",
+    "website": "https://www.mid-delyouth.org/",
+    "address": "316 S Midwest Boulevard, Midwest City, OK 73110",
+    "hours": "Call ahead to confirm hours.",
+    "eligibility": "Contact provider for eligibility and appointments.",
+    "lastVerified": "2026-07-01",
+    "sourceUrl": "https://www.midwestcityok.org/191/Community-Service-Programs",
+    "confidence": "High"
+  },
+  {
+    "name": "Autumn House Social Services Program",
+    "category": "Senior Services",
+    "audiences": [
+      "Seniors",
+      "Low-income residents"
+    ],
+    "needs": [
+      "senior support",
+      "transportation",
+      "nutrition",
+      "social services"
+    ],
+    "description": "Program supporting social service, facility, transportation, and nutritional needs for low-income elderly residents.",
+    "phone": "405-739-1216",
+    "website": "https://www.midwestcityok.org/191/Community-Service-Programs",
+    "address": "Midwest City, OK service area",
+    "hours": "Call ahead to confirm hours.",
+    "eligibility": "Low-income elderly residents.",
+    "lastVerified": "2026-07-01",
+    "sourceUrl": "https://www.midwestcityok.org/191/Community-Service-Programs",
+    "confidence": "High"
+  },
+  {
+    "name": "Before/After School Scholarships",
+    "category": "Youth & Family",
+    "audiences": [
+      "Children",
+      "Families",
+      "Students"
+    ],
+    "needs": [
+      "before school care",
+      "after school care",
+      "child care scholarships"
+    ],
+    "description": "Scholarships supporting before- and after-school child care at Midwest City elementary schools.",
+    "phone": "405-942-1250",
+    "website": "https://www.latchkey.us/",
+    "address": "Midwest City elementary schools",
+    "hours": "Call ahead to confirm hours.",
+    "eligibility": "Low- to moderate-income families; contact Latchkey Child Services.",
+    "lastVerified": "2026-07-01",
+    "sourceUrl": "https://www.midwestcityok.org/191/Community-Service-Programs",
+    "confidence": "High"
+  },
+  {
+    "name": "Steed Head Start",
+    "category": "Youth & Family",
+    "audiences": [
+      "Children",
+      "Families"
+    ],
+    "needs": [
+      "head start",
+      "early childhood education",
+      "child care"
+    ],
+    "description": "Head Start early childhood education site supported through Community Action Agency.",
+    "phone": "405-733-7488",
+    "website": "https://caaofokc.org/",
+    "address": "2118 Flannery Drive, Midwest City, OK",
+    "hours": "Call ahead to confirm hours.",
+    "eligibility": "Contact Community Action Agency for enrollment details.",
+    "lastVerified": "2026-07-01",
+    "sourceUrl": "https://www.midwestcityok.org/191/Community-Service-Programs",
+    "confidence": "High"
+  },
+  {
+    "name": "DB Cooper Head Start",
+    "category": "Youth & Family",
+    "audiences": [
+      "Children",
+      "Families"
+    ],
+    "needs": [
+      "head start",
+      "early childhood education",
+      "child care"
+    ],
+    "description": "Head Start early childhood education site supported through Community Action Agency.",
+    "phone": "405-769-3011",
+    "website": "https://caaofokc.org/",
+    "address": "9300 NE 10th Street, Midwest City, OK",
+    "hours": "Call ahead to confirm hours.",
+    "eligibility": "Contact Community Action Agency for enrollment details.",
+    "lastVerified": "2026-07-01",
+    "sourceUrl": "https://www.midwestcityok.org/191/Community-Service-Programs",
+    "confidence": "High"
+  },
+  {
+    "name": "Leah's Hope Transitional Housing",
+    "category": "Housing & Shelter",
+    "audiences": [
+      "Families",
+      "People experiencing homelessness"
+    ],
+    "needs": [
+      "transitional housing",
+      "homeless families",
+      "case management",
+      "classes"
+    ],
+    "description": "Local transitional housing program offering services, classes, and case management.",
+    "phone": "405-760-2706",
+    "website": "https://leahshope.org/",
+    "address": "Midwest City, OK service area",
+    "hours": "Call ahead to confirm hours.",
+    "eligibility": "Contact Leah's Hope for eligibility and availability.",
+    "lastVerified": "2026-07-01",
+    "sourceUrl": "https://www.midwestcityok.org/191/Community-Service-Programs",
+    "confidence": "High"
+  },
+  {
+    "name": "Midwest City Senior Center",
+    "category": "Senior Services",
+    "audiences": [
+      "Seniors"
+    ],
+    "needs": [
+      "senior activities",
+      "classes",
+      "meals",
+      "events"
+    ],
+    "description": "City senior center offering programs, classes, events, activities, and congregate meals for adults age 60 and older.",
+    "phone": "405-739-1200",
+    "website": "https://www.midwestcityok.org/166/Senior-Center",
+    "address": "8251 E Reno Avenue, Midwest City, OK 73110",
+    "hours": "Monday-Friday 8 am-5 pm",
+    "eligibility": "Adults age 60 and older.",
+    "lastVerified": "2026-07-01",
+    "sourceUrl": "https://www.midwestcityok.org/166/Senior-Center",
+    "confidence": "High"
+  },
+  {
+    "name": "Metropolitan Fair Housing Council of Oklahoma",
+    "category": "Legal Aid",
+    "audiences": [
+      "Renters",
+      "Homebuyers",
+      "Residents"
+    ],
+    "needs": [
+      "fair housing",
+      "housing discrimination",
+      "tenant rights"
+    ],
+    "description": "Fair housing organization providing support for people who believe they experienced housing discrimination.",
+    "phone": "405-232-3427",
+    "website": "https://metrofairhousing.org/",
+    "address": "Oklahoma City metro service area",
+    "hours": "Call ahead to confirm hours.",
+    "eligibility": "People seeking fair housing discrimination information or assistance.",
+    "lastVerified": "2026-07-01",
+    "sourceUrl": "https://www.midwestcityok.org/434/Fair-Housing",
+    "confidence": "High"
+  },
+  {
+    "name": "Mid-Del Food Pantry",
+    "category": "Food & Basic Needs",
+    "audiences": [
+      "Everyone",
+      "Families"
+    ],
+    "needs": [
+      "food pantry",
+      "groceries"
+    ],
+    "description": "Food pantry serving up to 30 households daily.",
+    "phone": "405-732-3603",
+    "website": "https://www.midwestcityok.org/DocumentCenter/View/984/Midwest-City-Resource-List-",
+    "address": "320 N Midwest Blvd, Midwest City, OK",
+    "hours": "Monday, Wednesday, Friday 10 am-12 pm",
+    "eligibility": "Call ahead to confirm availability.",
+    "lastVerified": "2026-07-01",
+    "sourceUrl": "https://www.midwestcityok.org/DocumentCenter/View/984/Midwest-City-Resource-List-",
+    "confidence": "Medium"
+  },
+  {
+    "name": "St. Christopher Episcopal Church Emergency Grocery Bags",
+    "category": "Food & Basic Needs",
+    "audiences": [
+      "Everyone",
+      "Families"
+    ],
+    "needs": [
+      "food",
+      "emergency groceries"
+    ],
+    "description": "Emergency grocery bags with no ID required per the City resource list.",
+    "phone": "405-732-4802",
+    "website": "https://www.midwestcityok.org/DocumentCenter/View/984/Midwest-City-Resource-List-",
+    "address": "800 S Midwest Blvd, Midwest City, OK",
+    "hours": "1st and 3rd Sunday 12-2 pm",
+    "eligibility": "Call ahead to confirm availability.",
+    "lastVerified": "2026-07-01",
+    "sourceUrl": "https://www.midwestcityok.org/DocumentCenter/View/984/Midwest-City-Resource-List-",
+    "confidence": "Medium"
+  },
+  {
+    "name": "Infant Crisis Center",
+    "category": "Food & Basic Needs",
+    "audiences": [
+      "Infants",
+      "Families",
+      "Parents"
+    ],
+    "needs": [
+      "diapers",
+      "formula",
+      "baby supplies"
+    ],
+    "description": "Provides diapers, formula or toddler food, wipes, bottles, and infant supplies by appointment.",
+    "phone": "405-528-3663",
+    "website": "https://www.infantcrisis.org/",
+    "address": "4224 N Lincoln Blvd, Oklahoma City, OK",
+    "hours": "By appointment; Monday-Friday 9 am-4:30 pm",
+    "eligibility": "Children ages 0-3; service frequency limits may apply.",
+    "lastVerified": "2026-07-01",
+    "sourceUrl": "https://www.infantcrisis.org/",
+    "confidence": "High"
+  },
+  {
+    "name": "All Things Baby",
+    "category": "Food & Basic Needs",
+    "audiences": [
+      "Infants",
+      "Families",
+      "Parents"
+    ],
+    "needs": [
+      "baby clothes",
+      "baby supplies"
+    ],
+    "description": "Provides free baby clothes and supplies; families should call before visiting.",
+    "phone": "405-285-6245",
+    "website": "https://allthingsbabyok.com/",
+    "address": "405 W 2nd St, Edmond, OK",
+    "hours": "Tuesday 10 am-1 pm",
+    "eligibility": "Available twice per year per family per City resource list.",
+    "lastVerified": "2026-07-01",
+    "sourceUrl": "https://www.midwestcityok.org/DocumentCenter/View/984/Midwest-City-Resource-List-",
+    "confidence": "Medium"
+  },
+  {
+    "name": "Willow Pregnancy Center",
+    "category": "Health Care",
+    "audiences": [
+      "Pregnant people",
+      "Families"
+    ],
+    "needs": [
+      "pregnancy testing",
+      "ultrasound",
+      "parenting resources"
+    ],
+    "description": "Pregnancy center offering free pregnancy testing, limited ultrasound, parenting, and community support resources.",
+    "phone": "405-631-4477",
+    "website": "https://willowpregnancy.org/",
+    "address": "4701 S Western Ave, Oklahoma City, OK",
+    "hours": "Monday-Thursday 10 am-4 pm",
+    "eligibility": "Call ahead for services.",
+    "lastVerified": "2026-07-01",
+    "sourceUrl": "https://willowpregnancy.org/",
+    "confidence": "High"
+  },
+  {
+    "name": "Salvation Army Social Services - Oklahoma City",
+    "category": "Utilities & Financial Help",
+    "audiences": [
+      "Everyone",
+      "Families"
+    ],
+    "needs": [
+      "utility assistance",
+      "groceries",
+      "coats",
+      "fans"
+    ],
+    "description": "Social services office listed for utility assistance, groceries, coats, and fans.",
+    "phone": "405-246-1060",
+    "website": "https://southernusa.salvationarmy.org/central-oklahoma/",
+    "address": "1001 N Pennsylvania Ave, Oklahoma City, OK",
+    "hours": "Monday-Friday 8:30 am-4:30 pm",
+    "eligibility": "Call ahead to confirm assistance availability.",
+    "lastVerified": "2026-07-01",
+    "sourceUrl": "https://southernusa.salvationarmy.org/central-oklahoma/",
+    "confidence": "High"
+  },
+  {
+    "name": "St. Matthew Methodist Church Utility Assistance",
+    "category": "Utilities & Financial Help",
+    "audiences": [
+      "Residents",
+      "Families"
+    ],
+    "needs": [
+      "utility assistance"
+    ],
+    "description": "Church utility bill assistance; bring ID and bill per the City resource list.",
+    "phone": "405-732-6831",
+    "website": "https://www.stmatthew.org/",
+    "address": "300 N Air Depot Blvd, Midwest City, OK",
+    "hours": "Tuesday 10 am-12 pm",
+    "eligibility": "Call ahead to confirm availability.",
+    "lastVerified": "2026-07-01",
+    "sourceUrl": "https://www.midwestcityok.org/DocumentCenter/View/984/Midwest-City-Resource-List-",
+    "confidence": "Medium"
+  },
+  {
+    "name": "Wickline Methodist Church Utility Assistance",
+    "category": "Utilities & Financial Help",
+    "audiences": [
+      "Residents",
+      "Families"
+    ],
+    "needs": [
+      "utility assistance",
+      "shut-off notice"
+    ],
+    "description": "Church utility assistance for shut-off notices; call to schedule per the City resource list.",
+    "phone": "405-732-0356",
+    "website": "https://wickline.church/",
+    "address": "417 Mid America Blvd, Midwest City, OK",
+    "hours": "Call ahead to confirm hours.",
+    "eligibility": "Call to schedule; shut-off notice required per City resource list.",
+    "lastVerified": "2026-07-01",
+    "sourceUrl": "https://www.midwestcityok.org/DocumentCenter/View/984/Midwest-City-Resource-List-",
+    "confidence": "Medium"
+  },
+  {
+    "name": "Neighborhood Services Organization Eviction Prevention",
+    "category": "Housing & Shelter",
+    "audiences": [
+      "Renters",
+      "People at risk of homelessness"
+    ],
+    "needs": [
+      "eviction prevention",
+      "rent assistance",
+      "mortgage assistance"
+    ],
+    "description": "Eviction prevention, mortgage assistance, or first-month rent assistance listed by the City resource guide.",
+    "phone": "405-653-6624",
+    "website": "https://nsookc.org/",
+    "address": "431 SW 11th St, Oklahoma City, OK",
+    "hours": "Monday 8:30-11:30 am",
+    "eligibility": "Call ahead to confirm eligibility and funding.",
+    "lastVerified": "2026-07-01",
+    "sourceUrl": "https://nsookc.org/",
+    "confidence": "High"
+  },
+  {
+    "name": "Upward Transitions",
+    "category": "Housing & Shelter",
+    "audiences": [
+      "People experiencing homelessness"
+    ],
+    "needs": [
+      "case management",
+      "homelessness support",
+      "housing support"
+    ],
+    "description": "Case management and support for people experiencing homelessness.",
+    "phone": "405-232-5507",
+    "website": "https://upwardtransitions.org/",
+    "address": "1134 W Main St, Oklahoma City, OK",
+    "hours": "Call ahead to confirm hours.",
+    "eligibility": "Call ahead for eligibility and appointments.",
+    "lastVerified": "2026-07-01",
+    "sourceUrl": "https://upwardtransitions.org/",
+    "confidence": "High"
+  },
+  {
+    "name": "County Pharmacy",
+    "category": "Health Care",
+    "audiences": [
+      "Low-income residents",
+      "Patients"
+    ],
+    "needs": [
+      "prescriptions",
+      "medication assistance"
+    ],
+    "description": "Free prescription medication for eligible residents; call for details.",
+    "phone": "405-713-1891",
+    "website": "https://www.oklahomacounty.org/departments/social-services/pharmacy",
+    "address": "5901 N Classen Ct, Oklahoma City, OK",
+    "hours": "Call ahead to confirm hours.",
+    "eligibility": "Eligibility required; call for details.",
+    "lastVerified": "2026-07-01",
+    "sourceUrl": "https://www.oklahomacounty.org/departments/social-services/pharmacy",
+    "confidence": "High"
+  },
+  {
+    "name": "Healing Hearts Clinic",
+    "category": "Health Care",
+    "audiences": [
+      "Everyone",
+      "Uninsured residents"
+    ],
+    "needs": [
+      "free clinic",
+      "medical care"
+    ],
+    "description": "Free medical care by appointment on select Thursday evenings.",
+    "phone": "405-737-4441",
+    "website": "https://www.healingheartsclinic.org/",
+    "address": "1000 S Midwest Blvd, Midwest City, OK",
+    "hours": "2nd and 4th Thursday evenings",
+    "eligibility": "By appointment.",
+    "lastVerified": "2026-07-01",
+    "sourceUrl": "https://www.healingheartsclinic.org/",
+    "confidence": "High"
+  },
+  {
+    "name": "Skyline Urban Ministry",
+    "category": "Health Care",
+    "audiences": [
+      "Low-income residents"
+    ],
+    "needs": [
+      "eye exams",
+      "glasses"
+    ],
+    "description": "Offers free eye exams and discounted glasses.",
+    "phone": "405-605-1079",
+    "website": "https://www.skylineurbanministry.org/",
+    "address": "500 SE 15th St, Oklahoma City, OK",
+    "hours": "Call ahead to confirm hours.",
+    "eligibility": "Call ahead for eligibility and appointments.",
+    "lastVerified": "2026-07-01",
+    "sourceUrl": "https://www.skylineurbanministry.org/",
+    "confidence": "High"
+  },
+  {
+    "name": "Goodwill Job Connection",
+    "category": "Education & Employment",
+    "audiences": [
+      "Job seekers"
+    ],
+    "needs": [
+      "job assistance",
+      "employment training"
+    ],
+    "description": "Employment training and job assistance through Goodwill.",
+    "phone": "405-520-7697",
+    "website": "https://www.okgoodwill.org/",
+    "address": "Oklahoma City metro service area",
+    "hours": "Call ahead to confirm hours.",
+    "eligibility": "Call ahead for current Job Connection services.",
+    "lastVerified": "2026-07-01",
+    "sourceUrl": "https://www.okgoodwill.org/",
+    "confidence": "High"
+  },
+  {
+    "name": "OIC of Oklahoma County",
+    "category": "Education & Employment",
+    "audiences": [
+      "Job seekers",
+      "Students"
+    ],
+    "needs": [
+      "computer training",
+      "business training",
+      "high school diploma preparation"
+    ],
+    "description": "Training organization offering computer training, business training, and high school diploma preparation.",
+    "phone": "405-235-5651",
+    "website": "https://oicokc.org/",
+    "address": "3033 N Walnut Ave, Oklahoma City, OK",
+    "hours": "Call ahead to confirm hours.",
+    "eligibility": "Call ahead for enrollment details.",
+    "lastVerified": "2026-07-01",
+    "sourceUrl": "https://oicokc.org/",
+    "confidence": "High"
+  },
+  {
+    "name": "City Rescue Mission",
+    "category": "Housing & Shelter",
+    "audiences": [
+      "People experiencing homelessness"
+    ],
+    "needs": [
+      "emergency shelter",
+      "meals",
+      "homeless services"
+    ],
+    "description": "Emergency shelter and homeless services in Oklahoma City.",
+    "phone": "405-232-2709",
+    "website": "https://cityrescue.org/",
+    "address": "800 W California Ave, Oklahoma City, OK",
+    "hours": "Call ahead to confirm hours.",
+    "eligibility": "Call ahead to confirm intake requirements.",
+    "lastVerified": "2026-07-01",
+    "sourceUrl": "https://cityrescue.org/",
+    "confidence": "High"
+  },
+  {
+    "name": "Jesus House",
+    "category": "Housing & Shelter",
+    "audiences": [
+      "People experiencing homelessness"
+    ],
+    "needs": [
+      "emergency shelter",
+      "homeless services"
+    ],
+    "description": "Emergency shelter and recovery-focused homeless services in Oklahoma City.",
+    "phone": "405-232-7164",
+    "website": "https://jesushouseokc.org/",
+    "address": "1335 W Sheridan Ave, Oklahoma City, OK",
+    "hours": "Call ahead to confirm hours.",
+    "eligibility": "Call ahead to confirm intake requirements.",
+    "lastVerified": "2026-07-01",
+    "sourceUrl": "https://jesushouseokc.org/",
+    "confidence": "High"
   }
 ]
