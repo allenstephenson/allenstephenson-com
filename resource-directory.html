@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Concept demo for an AI-assisted Midwest City Community Resource Directory with searchable local services and maintenance workflow." />
+  <title>Midwest City Community Resource Directory Demo | The Digital City</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="directory-body">
+  <div class="site-shell directory-page directory-wide">
+    <header class="site-header directory-header" aria-label="Site header">
+      <a class="brand" href="index.html#top" aria-label="The Digital City home"><span class="brand-mark" aria-hidden="true"></span><span>The Digital City</span></a>
+      <nav class="main-nav" aria-label="Primary navigation"><a href="index.html#systems">Systems</a><a href="index.html#articles">Articles</a><a href="index.html#projects">Projects</a><a href="ai.html">AI</a><a href="resource-directory.html" aria-current="page">Resource Directory</a></nav>
+    </header>
+
+    <main>
+      <section class="directory-alert-strip" aria-label="Emergency and crisis help">
+        <strong>Urgent help:</strong>
+        <span>Call <a href="tel:911">911</a> for emergencies, call or text <a href="tel:988">988</a> for mental health crisis, or dial <a href="tel:211">211</a> for community referrals.</span>
+      </section>
+
+      <section class="finder-hero" aria-labelledby="directory-title">
+        <div class="finder-hero-copy">
+          <p class="eyebrow">Concept demo • AI-assisted local services</p>
+          <h1 id="directory-title">Midwest City Community Resource Directory</h1>
+          <p class="finder-subtitle">Search a demo directory of crisis, food, housing, health, veterans, senior, youth, transportation, and city service resources.</p>
+        </div>
+
+        <form class="finder-search" role="search" aria-label="Search community resources">
+          <label class="sr-only" for="resourceSearch">Search resources</label>
+          <input id="resourceSearch" type="search" placeholder="Search by need, agency, or keyword" autocomplete="off" />
+          <label class="sr-only" for="categoryFilter">Category</label>
+          <select id="categoryFilter"><option value="">All categories</option></select>
+          <button class="button primary directory-search-button" type="submit">Find resources</button>
+        </form>
+
+        <p class="directory-demo-note">Concept demo. Confirm details directly with providers. For emergencies call 911; for mental health crisis call/text 988.</p>
+      </section>
+
+      <section class="urgent-band" id="featured-urgent" aria-labelledby="urgent-title">
+        <div class="band-heading">
+          <p class="eyebrow">Urgent help</p>
+          <h2 id="urgent-title">Start here for emergency and crisis support</h2>
+        </div>
+        <div id="featuredResources" class="urgent-compact-grid"></div>
+      </section>
+
+      <section class="finder-shell" id="directory-app" aria-labelledby="browse-title">
+        <div class="finder-toolbar">
+          <div>
+            <p class="eyebrow">Browse resources</p>
+            <h2 id="browse-title">Directory results</h2>
+          </div>
+          <div class="result-count" aria-live="polite"><strong id="resourceCount">Loading resources…</strong></div>
+        </div>
+
+        <div class="quick-needs" aria-label="Quick need filters">
+          <button type="button" data-quick="Crisis Help">Crisis</button>
+          <button type="button" data-quick="Food">Food</button>
+          <button type="button" data-quick="Housing">Housing</button>
+          <button type="button" data-quick="Mental Health">Mental Health</button>
+          <button type="button" data-quick="Utilities">Utilities</button>
+          <button type="button" data-quick="Veterans">Veterans</button>
+          <button type="button" data-quick="Seniors">Seniors</button>
+          <button type="button" data-quick="Youth & Families">Youth &amp; Families</button>
+          <button type="button" data-quick="Transportation">Transportation</button>
+          <button type="button" data-quick="City Services">City Services</button>
+        </div>
+
+        <details class="filter-drawer">
+          <summary>More filters</summary>
+          <div class="filter-grid">
+            <div class="control-field">
+              <label for="audienceFilter">Audience or need</label>
+              <select id="audienceFilter"><option value="">All audiences/needs</option></select>
+            </div>
+            <div class="control-field">
+              <label for="confidenceFilter">Confidence</label>
+              <select id="confidenceFilter">
+                <option value="">All confidence levels</option>
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+              </select>
+            </div>
+            <div class="control-field">
+              <label for="sortFilter">Sort by</label>
+              <select id="sortFilter">
+                <option value="featured">Featured and A–Z</option>
+                <option value="name">Organization A–Z</option>
+                <option value="category">Category</option>
+                <option value="verified">Recently verified</option>
+                <option value="confidence">Confidence</option>
+              </select>
+            </div>
+            <button class="button secondary small clear-button" id="clearFilters" type="button">Clear filters</button>
+          </div>
+        </details>
+
+        <div class="category-chip-row" id="categoryChips" aria-label="Category shortcuts"></div>
+        <div id="activeFilters" class="active-filters" aria-live="polite"></div>
+        <div id="resourceCards" class="resource-list directory-results"></div>
+        <p class="empty-state" id="resourceEmpty" hidden>No resources match those filters. Try a broader search or clear filters.</p>
+      </section>
+
+      <section class="ai-workflow-section compact-ai" id="ai-maintenance" aria-labelledby="ai-maintenance-title">
+        <div class="section-heading">
+          <p class="eyebrow">Directory maintenance concept</p>
+          <h2 id="ai-maintenance-title">How AI supports updates</h2>
+          <p>AI can draft updates, check links, flag stale information, and route changes to a human review queue before publication.</p>
+        </div>
+        <div class="workflow-grid compact-workflow">
+          <article><span>01</span><h3>Discover</h3><p>Find candidate resources from public sources.</p></article>
+          <article><span>02</span><h3>Check</h3><p>Detect duplicates, broken links, and stale details.</p></article>
+          <article><span>03</span><h3>Review</h3><p>Send proposed changes to staff before publishing.</p></article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><strong>The Digital City</strong><p>Exploring technology, infrastructure, and innovation in the public sector.</p></footer>
+  </div>
+  <script src="resource-directory.js"></script>
+</body>
+</html>
