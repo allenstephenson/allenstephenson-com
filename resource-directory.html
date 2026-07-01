@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Concept demo for an AI-assisted Midwest City Community Resource Directory with searchable local services and maintenance workflow." />
+  <title>Midwest City Community Resource Directory Demo | The Digital City</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="site-shell directory-page">
+    <header class="site-header" aria-label="Site header">
+      <a class="brand" href="index.html#top" aria-label="The Digital City home"><span class="brand-mark" aria-hidden="true"></span><span>The Digital City</span></a>
+      <nav class="main-nav" aria-label="Primary navigation"><a href="index.html#systems">Systems</a><a href="index.html#articles">Articles</a><a href="index.html#projects">Projects</a><a href="ai.html">AI</a><a href="resource-directory.html" aria-current="page">Resource Directory</a></nav>
+    </header>
+
+    <main>
+      <section class="directory-hero" aria-labelledby="directory-title">
+        <div>
+          <p class="eyebrow">Concept demo — not an official city service</p>
+          <h1 id="directory-title">Midwest City Community Resource Directory</h1>
+          <p class="hero-description">A live demonstration of how an AI-assisted, human-reviewed local resource directory could help Midwest City residents find public benefits, crisis support, food, housing, health care, veterans services, transportation, and other community help.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#directory-app">Search resources</a>
+            <a class="button secondary" href="#ai-maintenance">AI maintenance workflow</a>
+          </div>
+        </div>
+        <aside class="demo-disclaimer" aria-labelledby="disclaimer-title">
+          <h2 id="disclaimer-title">Important disclaimer</h2>
+          <p>This page is an independent concept/demo for discussion. It is not an official City of Midwest City production service and does not replace 211, agency websites, or direct confirmation with providers.</p>
+          <p><strong>Emergency:</strong> call 911 for immediate danger. For mental health or suicide crisis, call or text 988.</p>
+        </aside>
+      </section>
+
+      <section class="section crisis-strip" aria-labelledby="crisis-title">
+        <div class="section-heading">
+          <p class="eyebrow">Start here for urgent needs</p>
+          <h2 id="crisis-title">Emergency & crisis contacts</h2>
+          <p>These high-priority entries stay visible before the searchable directory.</p>
+        </div>
+        <div id="featuredResources" class="resource-grid"></div>
+      </section>
+
+      <section class="section" id="directory-app" aria-labelledby="search-title">
+        <div class="section-heading">
+          <p class="eyebrow">Searchable directory</p>
+          <h2 id="search-title">Find local and regional help</h2>
+          <p>Filter by category, keyword, and audience/need. Listings include source links and confidence levels so reviewers can quickly see what should be checked next.</p>
+        </div>
+
+        <form class="directory-controls" role="search" aria-label="Filter community resources">
+          <div class="control-field wide">
+            <label for="resourceSearch">Keyword</label>
+            <input id="resourceSearch" type="search" placeholder="Try food, veterans, housing, youth, utility bill…" autocomplete="off" />
+          </div>
+          <div class="control-field">
+            <label for="categoryFilter">Category</label>
+            <select id="categoryFilter"><option value="">All categories</option></select>
+          </div>
+          <div class="control-field">
+            <label for="audienceFilter">Audience or need</label>
+            <select id="audienceFilter"><option value="">All audiences/needs</option></select>
+          </div>
+        </form>
+
+        <div class="directory-summary" aria-live="polite"><strong id="resourceCount">Loading resources…</strong><button class="button secondary small" id="clearFilters" type="button">Clear filters</button></div>
+        <div id="resourceCards" class="resource-grid directory-results"></div>
+        <p class="empty-state" id="resourceEmpty" hidden>No resources match those filters.</p>
+      </section>
+
+      <section class="section split-band ai-maintenance" id="ai-maintenance" aria-labelledby="ai-maintenance-title">
+        <div>
+          <p class="eyebrow">Human-reviewed automation</p>
+          <h2 id="ai-maintenance-title">How AI could maintain the directory</h2>
+        </div>
+        <div class="workflow-list">
+          <ol>
+            <li><strong>Find candidate resources</strong> from official websites, 211-style listings, school pages, state agencies, and local nonprofits.</li>
+            <li><strong>Detect duplicates</strong> by comparing names, phone numbers, addresses, service areas, and website domains.</li>
+            <li><strong>Summarize services</strong> into plain-language descriptions with eligibility notes and confidence levels.</li>
+            <li><strong>Check broken links</strong> and flag redirects, timeouts, or pages that no longer mention the listed service.</li>
+            <li><strong>Flag outdated listings</strong> when verification dates get old, hours change, or source pages differ from stored data.</li>
+            <li><strong>Send verification reminders</strong> to assigned staff or partner agencies before high-risk information expires.</li>
+            <li><strong>Use a review queue</strong> so suggested additions and changes are approved by a human before publication.</li>
+          </ol>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><strong>The Digital City</strong><p>Exploring technology, infrastructure, and innovation in the public sector.</p></footer>
+  </div>
+  <script src="resource-directory.js"></script>
+</body>
+</html>
