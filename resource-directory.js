@@ -78,16 +78,16 @@ function detailRows(resource) {
       <div><dt>Hours</dt><dd>${resource.hours || "Confirm directly"}</dd></div>
       <div><dt>Eligibility</dt><dd>${resource.eligibility || "Confirm directly"}</dd></div>
       <div><dt>Last verified</dt><dd>${verifiedFormatter.format(new Date(`${resource.lastVerified}T00:00:00`))}</dd></div>
-      <div><dt>Confidence</dt><dd>${resource.confidence || "Confirm directly"}</dd></div>
+      <div><dt>Phone</dt><dd>${resource.phone || "Confirm directly"}</dd></div>
       <div><dt>Source</dt><dd><a class="source-link" href="${resource.sourceUrl}" target="_blank" rel="noopener noreferrer">View source</a></dd></div>
     </dl>
     <div class="tag-list">${tags.slice(0, 10).map((tag) => `<span>${tag}</span>`).join("")}</div>
   `;
 }
 
-function createResourceCard(resource, options = {}) {
+function createResourceCard(resource) {
   const card = document.createElement("article");
-  card.className = `resource-card portal-resource-card confidence-${normalize(resource.confidence)}${options.compact ? " compact-resource-card" : ""}`;
+  card.className = `resource-card portal-resource-card confidence-${normalize(resource.confidence)}`;
 
   card.innerHTML = `
     <div class="resource-main-row">
@@ -95,7 +95,6 @@ function createResourceCard(resource, options = {}) {
       <div class="resource-content">
         <div class="resource-card-header">
           <span class="category">${resource.category}</span>
-          ${options.compact ? "" : `<span class="resource-confidence-dot">${resource.confidence} confidence</span>`}
         </div>
         <h3>${resource.name}</h3>
         <p>${resource.description}</p>
@@ -105,7 +104,54 @@ function createResourceCard(resource, options = {}) {
         ${resource.phone ? `<a class="button secondary small call-button" href="${telHref(resource.phone)}">Call</a>` : ""}
       </div>
     </div>
-    ${options.compact ? "" : `<details class="resource-extra"><summary>Details</summary>${detailRows(resource)}</details>`}
+    <details class="resource-extra"><summary>Details</summary>${detailRows(resource)}</details>
+  `;
+  return card;
+}
+
+function isUrgentResource(resource) {
+  const text = resourceSearchText(resource);
+  return resource.category === "Crisis & Emergency"
+    || text.includes("mental health crisis")
+    || text.includes("suicide")
+    || text.includes("domestic violence")
+    || text.includes("emergency shelter")
+    || text.includes("immediate danger")
+    || text.includes("overdose")
+    || text.includes("veteran crisis");
+}
+
+function createUrgentCard(resource) {
+  const card = document.createElement("article");
+  card.className = "urgent-card";
+  card.innerHTML = `
+    <div class="urgent-card-body">
+      <span class="category">${resource.category}</span>
+      <h3>${resource.name}</h3>
+      <p>${resource.description}</p>
+      <small>${resource.phone ? `Phone: ${resource.phone}` : "Confirm availability directly"}</small>
+    </div>
+    <div class="urgent-card-actions">
+      <a class="button primary small" href="${resource.website}" target="_blank" rel="noopener noreferrer">Visit Website</a>
+      ${resource.phone ? `<a class="button secondary small" href="${telHref(resource.phone)}">Call</a>` : ""}
+    </div>
+  `;
+  return card;
+}
+
+function createCoreUrgentCard({ label, title, description, href, action }) {
+  const card = document.createElement("article");
+  card.className = "urgent-card core-urgent-card";
+  card.innerHTML = `
+    <div class="urgent-card-body">
+      <span class="category">${label}</span>
+      <h3>${title}</h3>
+      <p>${description}</p>
+      <small>Available now</small>
+    </div>
+    <div class="urgent-card-actions">
+      <a class="button primary small" href="${href}">${action}</a>
+    </div>
   `;
   return card;
 }
@@ -160,28 +206,17 @@ function getFilteredResources() {
   const query = normalize(document.getElementById("resourceSearch").value.trim());
   const category = document.getElementById("categoryFilter").value;
   const audience = document.getElementById("audienceFilter").value;
-  const confidence = document.getElementById("confidenceFilter").value;
 
   return resources.filter((resource) => {
     const categoryMatches = !category || resource.category === category;
     const audienceMatches = !audience || [...(resource.audiences || []), ...(resource.needs || [])].includes(audience);
-    const confidenceMatches = !confidence || resource.confidence === confidence;
     const queryMatches = !query || resourceSearchText(resource).includes(query);
-    return categoryMatches && audienceMatches && confidenceMatches && queryMatches;
+    return categoryMatches && audienceMatches && queryMatches;
   });
 }
 
 function sortResources(list) {
-  const sort = document.getElementById("sortFilter").value;
-  const confidenceRank = { High: 0, Medium: 1, Low: 2 };
-
-  return [...list].sort((a, b) => {
-    if (sort === "name") return a.name.localeCompare(b.name);
-    if (sort === "category") return a.category.localeCompare(b.category) || a.name.localeCompare(b.name);
-    if (sort === "verified") return b.lastVerified.localeCompare(a.lastVerified) || a.name.localeCompare(b.name);
-    if (sort === "confidence") return (confidenceRank[a.confidence] ?? 9) - (confidenceRank[b.confidence] ?? 9) || a.name.localeCompare(b.name);
-    return Number(Boolean(b.featured)) - Number(Boolean(a.featured)) || a.name.localeCompare(b.name);
-  });
+  return [...list].sort((a, b) => Number(Boolean(b.featured)) - Number(Boolean(a.featured)) || a.name.localeCompare(b.name));
 }
 
 function renderActiveFilters(total) {
@@ -190,13 +225,11 @@ function renderActiveFilters(total) {
   const query = document.getElementById("resourceSearch").value.trim();
   const category = document.getElementById("categoryFilter").value;
   const audience = document.getElementById("audienceFilter").value;
-  const confidence = document.getElementById("confidenceFilter").value;
 
   if (currentQuickNeed) filters.push(`Quick need: ${currentQuickNeed}`);
   if (query) filters.push(`Keyword: ${query}`);
   if (category) filters.push(`Category: ${category}`);
   if (audience) filters.push(`Audience/need: ${audience}`);
-  if (confidence) filters.push(`Confidence: ${confidence}`);
 
   container.innerHTML = filters.length
     ? filters.map((filter) => `<span>${filter}</span>`).join("")
@@ -228,8 +261,16 @@ function applyFilters() {
 }
 
 function renderFeatured() {
-  const featured = resources.filter((resource) => resource.featured);
-  document.getElementById("featuredResources").replaceChildren(...featured.map((resource) => createResourceCard(resource, { compact: true })));
+  const coreActions = [
+    { label: "Emergency", title: "Emergency / 911", description: "For immediate danger, fire, serious injury, or a crime in progress.", href: "tel:911", action: "Call 911" },
+    { label: "Crisis", title: "Mental health crisis / 988", description: "Call or text for suicide, mental health, or substance-use crisis support.", href: "tel:988", action: "Call 988" },
+    { label: "Referrals", title: "Community referrals / 211", description: "Get connected to nearby food, housing, utility, and social-service referrals.", href: "tel:211", action: "Call 211" }
+  ];
+  const featured = resources.filter((resource) => resource.featured && isUrgentResource(resource));
+  document.getElementById("featuredResources").replaceChildren(
+    ...coreActions.map(createCoreUrgentCard),
+    ...featured.map(createUrgentCard)
+  );
 }
 
 function wireEvents() {
@@ -240,15 +281,14 @@ function wireEvents() {
     document.getElementById("directory-app").scrollIntoView({ behavior: "smooth", block: "start" });
   });
 
-  ["resourceSearch", "categoryFilter", "audienceFilter", "confidenceFilter", "sortFilter"].forEach((id) => {
+  ["resourceSearch", "categoryFilter", "audienceFilter"].forEach((id) => {
     document.getElementById(id).addEventListener("input", () => { currentQuickNeed = ""; applyFilters(); });
     document.getElementById(id).addEventListener("change", () => { currentQuickNeed = ""; applyFilters(); });
   });
 
   document.getElementById("clearFilters").addEventListener("click", () => {
     currentQuickNeed = "";
-    ["resourceSearch", "categoryFilter", "audienceFilter", "confidenceFilter"].forEach((id) => { document.getElementById(id).value = ""; });
-    document.getElementById("sortFilter").value = "featured";
+    ["resourceSearch", "categoryFilter", "audienceFilter"].forEach((id) => { document.getElementById(id).value = ""; });
     applyFilters();
   });
 
@@ -260,7 +300,6 @@ function wireEvents() {
       document.getElementById("resourceSearch").value = quick.query;
       document.getElementById("categoryFilter").value = quick.category;
       document.getElementById("audienceFilter").value = "";
-      document.getElementById("confidenceFilter").value = "";
       applyFilters();
       document.getElementById("directory-app").scrollIntoView({ behavior: "smooth", block: "start" });
     });
